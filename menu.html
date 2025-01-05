@@ -598,8 +598,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		}
 	</style>
 	<link rel='stylesheet' id='woo-variation-swatches-css'
-		href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min845d.css?ver=1733196960'
-		media='all' />
+		href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min845d.css?ver=1733196960' media='all' />
 	<style id='woo-variation-swatches-inline-css'>
 		:root {
 			--wvs-tick: url("data:image/svg+xml;utf8,%3Csvg filter='drop-shadow(0px 0px 2px rgb(0 0 0 / .8))' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 30 30'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M4 16L11 23 27 7'/%3E%3C/svg%3E");
@@ -703,8 +702,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<script src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
 	<script src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
-	<script
-		src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min2574.js?ver=2.7.0-wc.9.4.2"
+	<script src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min2574.js?ver=2.7.0-wc.9.4.2"
 		id="jquery-blockui-js" data-wp-strategy="defer"></script>
 	<script id="wc-add-to-cart-js-extra">
 		var wc_add_to_cart_params = { "ajax_url": "\/yumyum\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/yumyum\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "", "cart_url": "", "is_cart": "", "cart_redirect_after_add": "no" };
@@ -716,8 +714,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	<script id="woocommerce-js-extra">
 		var woocommerce_params = { "ajax_url": "\/yumyum\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/yumyum\/?wc-ajax=%%endpoint%%" };
 	</script>
-	<script src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minea26.js?ver=9.4.2"
-		id="woocommerce-js" defer data-wp-strategy="defer"></script>
+	<script src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minea26.js?ver=9.4.2" id="woocommerce-js"
+		defer data-wp-strategy="defer"></script>
 	<script data-minify="1"
 		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/libs/jarallax0ab5.js?ver=1733562605"
 		id="jarallax-js"></script>
@@ -776,63 +774,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
 		}
 	</style>
-	<script type="rocketlazyloadscript">function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
-				try {
-					var pw = document.getElementById(e.c).parentNode.offsetWidth,
-						newh;
-					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
-					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
-					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
-					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
-					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
-					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
-					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
-					if(e.layout==="fullscreen" || e.l==="fullscreen")
-						newh = Math.max(e.mh,window.RSIH);
-					else{
-						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
-						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
-						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
-						var nl = new Array(e.rl.length),
-							ix = 0,
-							sl;
-						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
-						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
-						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
-						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
-						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}
-					var el = document.getElementById(e.c);
-					if (el!==null && el) el.style.height = newh+"px";
-					el = document.getElementById(e.c+"_wrapper");
-					if (el!==null && el) {
-						el.style.height = newh+"px";
-						el.style.display = "block";
-					}
-				} catch(e){
-					console.log("Failure at Presize of Slider:" + e)
-				}
-			//});
-		  };</script>
-	<noscript>
-		<style id="rocket-lazyload-nojs-css">
-			.rll-youtube-player,
-			[data-lazy-src] {
-				display: none !important;
-			}
-		</style>
-	</noscript>
+
+
 </head>
 
 <body
@@ -854,17 +797,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 										<div class="yumyum-site-logo-set">
 											<div class="yumyum-site-logo-container">
 												<img class="yumyum-site-logo-img elementor-animation-"
-													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-													alt="logo-1"
-													style="transform: scale(0.5);
-													transform-origin: top left;
-													padding-top: 7%;
-													"
-													data-lazy-src="/wp-content/uploads/2024/09/logo-6.png" /><noscript><img
-														class="yumyum-site-logo-img elementor-animation-"
-														src="wp-content/uploads/2024/09/logo-6.png"
-														alt="logo-1" /></noscript>
+													src="wp-content/uploads/2024/09/logo-6.png" alt="logo-1"
+													style="transform: scale(0.5); transform-origin: top left; padding-top: 7%;" />
 											</div>
+
 										</div>
 									</a>
 								</div>
@@ -882,21 +818,25 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 											<ul id="menu-1-b368643" class="menu">
 												<li id="menu-item-159"
 													class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-159 has-mega-menu has-stretchwidth">
-													<a href="index.html"><span class="menu-title">Home</span></a></li>
+													<a href="index.html"><span class="menu-title">Home</span></a>
+												</li>
 												<li id="menu-item-180"
-														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-180 has-mega-menu has-stretchwidth">
-														<a href="menu.html"><span class="menu-title">Menu</span></a>
-													</li>
-													<li id="menu-item-170"
-														class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-170">
-														<a href="franchise.html"><span class="menu-title">franchise-opportunity</span></a></li>
-														<li id="menu-item-219"
-															class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219">
-															<a href="contact.html"><span
-																	class="menu-title">Contact</span></a></li>
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-180 has-mega-menu has-stretchwidth">
+													<a href="menu.html"><span class="menu-title">Menu</span></a>
+												</li>
+												<li id="menu-item-170"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-170">
+													<a href="franchise.html"><span
+															class="menu-title">franchise-opportunity</span></a>
+												</li>
+												<li id="menu-item-219"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219">
+													<a href="contact.html"><span class="menu-title">Contact</span></a>
+												</li>
 												<li id="menu-item-169"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169">
-													<a href="awards.html"><span class="menu-title">awards</span></a></li>
+													<a href="awards.html"><span class="menu-title">awards</span></a>
+												</li>
 											</ul>
 										</div>
 									</nav>
@@ -938,9 +878,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 									<div class="breadcrumb-listItem">
 										<!-- Breadcrumb NavXT 7.3.1 -->
 										<span property="itemListElement" typeof="ListItem"><a property="item"
-												typeof="WebPage" title="Go to Yumyum."
-												href="index.html" class="home"><span
-													property="name">Pizzaiiolo</span></a>
+												typeof="WebPage" title="Go to Yumyum." href="index.html"
+												class="home"><span property="name">Pizzaiiolo</span></a>
 											<meta property="position" content="1">
 										</span> &gt; <span property="itemListElement" typeof="ListItem"><span
 												property="name"
@@ -957,299 +896,262 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		</div>
 
 
-				<div id="primary" style="padding: 10%;">
-					<main id="main" class="site-main">
+		<div id="primary" style="padding: 10%;">
+			<main id="main" class="site-main">
 
 
-						<div class="woocommerce-notices-wrapper"></div>
-						<div class="yumyum-products-grid elementor-grid-3 elementor-grid-laptop-2 elementor-grid-tablet-2 elementor-grid-mobile-2"
-							data-filters-open-classes="yumyum-products-grid elementor-grid-2 elementor-grid-laptop-2 elementor-grid-tablet-2 elementor-grid-mobile-2"
-							data-filters-closed-classes="yumyum-products-grid elementor-grid-1 elementor-grid-laptop-1 elementor-grid-tablet-2 elementor-grid-mobile-2">
-							<div class="yumyum-con">
-								<ul class="yumyum-products products elementor-grid">
+				<div class="woocommerce-notices-wrapper"></div>
+				<div class="yumyum-products-grid elementor-grid-3 elementor-grid-laptop-2 elementor-grid-tablet-2 elementor-grid-mobile-2"
+					data-filters-open-classes="yumyum-products-grid elementor-grid-2 elementor-grid-laptop-2 elementor-grid-tablet-2 elementor-grid-mobile-2"
+					data-filters-closed-classes="yumyum-products-grid elementor-grid-1 elementor-grid-laptop-1 elementor-grid-tablet-2 elementor-grid-mobile-2">
+					<div class="yumyum-con">
+						<ul class="yumyum-products products elementor-grid">
 
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-1.png 1000w, wp-content/uploads/2024/09/city-1.png 600w, wp-content/uploads/2024/09/city-1.png 300w, wp-content/uploads/2024/09/city-1.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-1.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-1.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-1.png 1000w, wp-content/uploads/2024/09/city-1-600x564.png 600w, wp-content/uploads/2024/09/city-1.png 300w, wp-content/uploads/2024/09/city-1.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">Ahmedabad</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Sindhubhavan Road, Prahladnagar, Nikol</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.25 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.25</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+										<div class="product-image">
+    <img loading="lazy" width="340" height="320" 
+         style="border-radius: 5%;" 
+         src="wp-content/uploads/2024/09/city-1.png" 
+         class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+         alt="" decoding="async" />
+</div>
+
+										<a href="menus/amd-menu.pdf"
+											class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+									</div>
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">Ahmedabad</a></h3>
+
 										</div>
-									</li>
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-2.png 1000w, wp-content/uploads/2024/09/city-2.png 600w, wp-content/uploads/2024/09/city-2.png 300w, wp-content/uploads/2024/09/city-2.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-2.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-2.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-2.png 1000w, wp-content/uploads/2024/09/city-2.png 600w, wp-content/uploads/2024/09/city-2.png 300w, wp-content/uploads/2024/09/city-2.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">Bhuj</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Shop-13 , D-Block, JV Business park, opposite Smritivan memorial & Museum, Shreeji Nagar, Bhuj, Gujarat 370001</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.25 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.25</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+
+										<div class="product-ingredient"><span
+												class="product-ingredient-item">Sindhubhavan Road, Prahladnagar,
+												Nikol</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
 										</div>
-									</li>
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-3.png 1000w, wp-content/uploads/2024/09/city-3.png 600w, wp-content/uploads/2024/09/city-3.png 300w, wp-content/uploads/2024/09/city-3.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-3.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-3.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-3.png 1000w, wp-content/uploads/2024/09/city-3.png 600w, wp-content/uploads/2024/09/city-3.png 300w, wp-content/uploads/2024/09/city-3.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">valsad</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Dreamland food plaza Unit No 4A Block No 569,570,NH48 Rola, Dungri, Gujarat 396375</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.3 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.3</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.25 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.25</strong> out of 5</span></div>
 										</div>
-									</li>
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-5.png 1000w, wp-content/uploads/2024/09/city-5.png 600w, wp-content/uploads/2024/09/city-5.png 300w, wp-content/uploads/2024/09/city-5.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-5.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-5.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-5.png 1000w, wp-content/uploads/2024/09/city-5.png 600w, wp-content/uploads/2024/09/city-5.png 300w, wp-content/uploads/2024/09/city-5.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">Pune</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Sunny's World, Pashan Sus Road, Sr. No. 217, Sus Ln, near Mumbai-Pune Bypass, Highway, Pune, Maharashtra 412115</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.3 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.3</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
 										</div>
-									</li>
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-4.png 1000w, wp-content/uploads/2024/09/city-4.png 600w, wp-content/uploads/2024/09/city-4.png 300w, wp-content/uploads/2024/09/city-4.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-4.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-4.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-4.png 1000w, wp-content/uploads/2024/09/city-4.png 600w, wp-content/uploads/2024/09/city-4.png 300w, wp-content/uploads/2024/09/city-4.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">Nakhatrana</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Sai Arket, bhuj Lakhpat Highway, Nakhatrana, Gujarat 370615</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.3 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.3</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+										<div class="product-caption-bottom">
+
+
 										</div>
-									</li>
-									<li
-										class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-										<div class="product-block">
-											<div class="product-transition">
-												<div class="product-image"><img loading="lazy" width="340" height="320" style="border-radius: 5%;"
-														src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20340%20320'%3E%3C/svg%3E"
-														class="attachment-yumyum-product-grid size-yumyum-product-grid"
-														alt="" decoding="async"
-														data-lazy-srcset="wp-content/uploads/2024/09/city-6.png 1000w, wp-content/uploads/2024/09/city-6.png 600w, wp-content/uploads/2024/09/city-6.png 300w, wp-content/uploads/2024/09/city-6.png 768w"
-														data-lazy-sizes="(max-width: 340px) 100vw, 340px"
-														data-lazy-src="wp-content/uploads/2024/09/city-6.png" /><noscript><img
-															loading="lazy" width="340" height="320"
-															src="wp-content/uploads/2024/09/city-6.png"
-															
-															class="attachment-yumyum-product-grid size-yumyum-product-grid"
-															alt="" decoding="async"
-															srcset="wp-content/uploads/2024/09/city-6.png 1000w, wp-content/uploads/2024/09/city-6.png 600w, wp-content/uploads/2024/09/city-6.png 300w, wp-content/uploads/2024/09/city-6.png 768w"
-															sizes="(max-width: 340px) 100vw, 340px" /></noscript></div>
-												<a href="menus/amd-menu.pdf"
-													class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-											</div>
-											<div class="product-caption">
-												<div class="product-caption-top">
-													<h3 class="woocommerce-loop-product__title"><a
-															href="menus/amd-menu.pdf">Maliya</a></h3>
-													
-												</div>
-												
-												<div class="product-ingredient"><span
-														class="product-ingredient-item">Survey No-470, P1/P2 Maliya - Halwad highway, Gujarat 363630</span></div>
-														<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="count-review">
-													<div class="star-rating" role="img"
-														aria-label="Rated 4.3 out of 5"><span style="width:85%">Rated
-															<strong class="rating">4.3</strong> out of 5</span></div>
-												</div>
-												<div class="product-ingredient"><span
-														class="product-ingredient-item"></span></div>
-												<div class="product-caption-bottom">
-													
-													
-												</div>
-											</div>
+									</div>
+								</div>
+							</li>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+    <div class="product-image">
+        <img loading="lazy" width="340" height="320" 
+             style="border-radius: 5%;" 
+             src="wp-content/uploads/2024/09/city-2.png" 
+             class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+             alt="" decoding="async" />
+    </div>
+    <a href="menus/amd-menu.pdf" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+</div>
+
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">Bhuj</a></h3>
+
 										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						
-					</main><!-- #main -->
-				</div><!-- #primary -->
+
+										<div class="product-ingredient"><span class="product-ingredient-item">Shop-13 ,
+												D-Block, JV Business park, opposite Smritivan memorial & Museum, Shreeji
+												Nagar, Bhuj, Gujarat 370001</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.25 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.25</strong> out of 5</span></div>
+										</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="product-caption-bottom">
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+    <div class="product-image">
+        <img loading="lazy" width="340" height="320" 
+             style="border-radius: 5%;" 
+             src="wp-content/uploads/2024/09/city-3.png" 
+             class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+             alt="" decoding="async" />
+    </div>
+    <a href="menus/amd-menu.pdf" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+</div>
+
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">valsad</a></h3>
+
+										</div>
+
+										<div class="product-ingredient"><span class="product-ingredient-item">Dreamland
+												food plaza Unit No 4A Block No 569,570,NH48 Rola, Dungri, Gujarat
+												396375</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.3 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.3</strong> out of 5</span></div>
+										</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="product-caption-bottom">
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+    <div class="product-image">
+        <img loading="lazy" width="340" height="320" 
+             style="border-radius: 5%;" 
+             src="wp-content/uploads/2024/09/city-5.png" 
+             class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+             alt="" decoding="async" />
+    </div>
+    <a href="menus/amd-menu.pdf" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+</div>
+
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">Pune</a></h3>
+
+										</div>
+
+										<div class="product-ingredient"><span class="product-ingredient-item">Sunny's
+												World, Pashan Sus Road, Sr. No. 217, Sus Ln, near Mumbai-Pune Bypass,
+												Highway, Pune, Maharashtra 412115</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.3 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.3</strong> out of 5</span></div>
+										</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="product-caption-bottom">
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+    <div class="product-image">
+        <img loading="lazy" width="340" height="320" 
+             style="border-radius: 5%;" 
+             src="wp-content/uploads/2024/09/city-4.png" 
+             class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+             alt="" decoding="async" />
+    </div>
+    <a href="menus/amd-menu.pdf" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+</div>
+
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">Nakhatrana</a></h3>
+
+										</div>
+
+										<div class="product-ingredient"><span class="product-ingredient-item">Sai Arket,
+												bhuj Lakhpat Highway, Nakhatrana, Gujarat 370615</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.3 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.3</strong> out of 5</span></div>
+										</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="product-caption-bottom">
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+							<li
+								class="product type-product post-126 status-publish first instock product_cat-burrito product_cat-salads product_tag-fast-food product_tag-good-meal has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+								<div class="product-block">
+									<div class="product-transition">
+    <div class="product-image">
+        <img loading="lazy" width="340" height="320" 
+             style="border-radius: 5%;" 
+             src="wp-content/uploads/2024/09/city-6.png" 
+             class="attachment-yumyum-product-grid size-yumyum-product-grid" 
+             alt="" decoding="async" />
+    </div>
+    <a href="menus/amd-menu.pdf" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+</div>
+
+									<div class="product-caption">
+										<div class="product-caption-top">
+											<h3 class="woocommerce-loop-product__title"><a
+													href="menus/amd-menu.pdf">Maliya</a></h3>
+
+										</div>
+
+										<div class="product-ingredient"><span class="product-ingredient-item">Survey
+												No-470, P1/P2 Maliya - Halwad highway, Gujarat 363630</span></div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="count-review">
+											<div class="star-rating" role="img" aria-label="Rated 4.3 out of 5"><span
+													style="width:85%">Rated
+													<strong class="rating">4.3</strong> out of 5</span></div>
+										</div>
+										<div class="product-ingredient"><span class="product-ingredient-item"></span>
+										</div>
+										<div class="product-caption-bottom">
+
+
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
 
 	</div><!-- #secondary -->
@@ -1257,212 +1159,301 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	</div><!-- .col-full -->
 	</div><!-- #content -->
 
-	
+
 	<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
-			<div class='footer-width-fixer'>
-				<div data-elementor-type="wp-post" data-elementor-id="258" class="elementor elementor-258">
-					<div class="elementor-element elementor-element-d22da3f e-con-full e-flex e-con e-parent e-lazyloaded" data-id="d22da3f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;yumyum-top&quot;}">
-						<div class="elementor-shape elementor-shape-top" data-negative="false">
-							<svg width="1920" height="24" viewBox="0 0 1920 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path class="elementor-shape-fill" d="M0 12.0832C0 -1.6198 1.222 -1.7098 35.835 9.4422C70.526 20.6192 99.241 20.9942 128 10.6462C156.216 0.492203 183.448 0.403202 214.4 10.3642C246.204 20.5992 273.035 20.6662 302.4 10.5822C331.584 0.561203 358.524 0.585203 390.4 10.6622C421.431 20.4712 445.935 20.4202 476.8 10.4832C507.8 0.502203 532.211 0.480202 563.2 10.4032C595.184 20.6442 621.939 20.6652 651.2 10.4692C680.383 0.300203 707.451 0.305202 737.6 10.4832C767.594 20.6092 794.764 20.6492 824 10.6112C853.851 0.363203 880.688 0.287205 912 10.3642C943.963 20.6502 970.689 20.6822 1000 10.4692C1029.33 0.247204 1056.32 0.287203 1086.4 10.5972C1115.9 20.7092 1143.13 20.7482 1172.59 10.7212C1200.59 1.1912 1221.67 1.1672 1249.81 10.6322C1280.06 20.8052 1310.04 20.8332 1337.6 10.7132C1365.93 0.309204 1395.71 0.255203 1425.6 10.5552C1455.25 20.7732 1482.3 20.7812 1512 10.5822C1541.51 0.448204 1568.68 0.412205 1598.4 10.4682C1628.06 20.5002 1655.02 20.4842 1686.4 10.4172C1717.42 0.465202 1741.82 0.472202 1772.8 10.4412C1803.32 20.2622 1833.99 20.4372 1860.34 10.9432C1870.65 7.2292 1888.29 3.2482 1899.55 2.0952L1920 -0.000797272V23.2832H0V12.0832Z" fill="#FB9300" fill-opacity="0.25"></path>
-							</svg>
-						</div>
-						<div class="elementor-element elementor-element-851ba47 e-con-full e-flex e-con e-child" data-id="851ba47" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-							<div class="elementor-element elementor-element-45a219d elementor-absolute animated-fast elementor-widget elementor-widget-image animated slideInUp" data-id="45a219d" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;slideInUp&quot;}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="414" height="395" src="wp-content/uploads/2024/09/img-ft-5-min.png" class="attachment-full size-full wp-image-682" alt="" srcset="wp-content/uploads/2024/09/img-ft-5-min.png 414w, wp-content/uploads/2024/09/img-ft-5-min-300x286.png 300w" sizes="(max-width: 414px) 100vw, 414px">
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-5e08526 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated pavo-move-down" data-id="5e08526" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;pavo-move-down&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="93" height="103" src="wp-content/uploads/2024/09/img-ft-4-min.png" class="attachment-full size-full wp-image-681" alt="">
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-bf89074 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image animated rubberBand" data-id="bf89074" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;rubberBand&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="149" height="134" src="wp-content/uploads/2024/09/img-ft-2-min.png" class="attachment-full size-full wp-image-679" alt="">
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-2315b78 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated fadeInLeft" data-id="2315b78" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_animation_delay&quot;:400}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="103" height="105" src="wp-content/uploads/2024/09/img-ft-3-min.png" class="attachment-full size-full wp-image-680" alt="" srcset="wp-content/uploads/2024/09/img-ft-3-min.png 103w, wp-content/uploads/2024/09/img-ft-3-min-50x50.png 50w" sizes="(max-width: 103px) 100vw, 103px">
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-60b379f elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated zoomIn" data-id="60b379f" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:600}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="59" height="67" src="wp-content/uploads/2024/09/img-ft-1-min.png" class="attachment-full size-full wp-image-678" alt="">
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-5e13783 e-con-full e-flex e-con e-child" data-id="5e13783" data-element_type="container">
-								<div class="elementor-element elementor-element-17d8805 elementor-widget elementor-widget-heading" data-id="17d8805" data-element_type="widget" data-widget_type="heading.default">
-									<div class="elementor-widget-container">
-										<h2 class="elementor-heading-title elementor-size-default">want to go back?
-										</h2>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-0eeeaf2 elementor-widget-tablet__width-initial elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-text-editor" data-id="0eeeaf2" data-element_type="widget" data-widget_type="text-editor.default">
-				
-										<div class="elementor-widget-container">
-											<div class="elementor-element elementor-element-6503780 elementor-button-outline elementor-widget elementor-widget-button" data-id="6503780" data-element_type="widget" data-widget_type="button.default">
-											<div class="elementor-widget-container">
-												<div class="elementor-button-wrapper">
-													<a class="elementor-button elementor-button-link elementor-size-md" href="index.html">
-														<span class="elementor-button-content-wrapper">
-															<span class="elementor-button-icon">
-																<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-																	<path d="M2.32861 6.13265H9.07052C9.19432 6.1321 9.31282 6.08241 9.39999 5.99451C9.48716 5.90661 9.53586 5.78769 9.53537 5.6639V5.13171C9.53537 3.74956 11.0447 2.90808 12.2059 3.64292L18.1402 7.3982C19.99 8.56874 19.9959 11.2841 18.1513 12.4629L12.0341 16.3719C10.9506 17.0643 9.53552 16.2795 9.53552 14.9862V13.9476H2.32861C1.83334 13.9456 1.35916 13.747 1.01037 13.3953C0.661582 13.0437 0.466762 12.5679 0.468765 12.0726V8.00765C0.466762 7.51238 0.661582 7.0366 1.01037 6.68497C1.35916 6.33334 1.83334 6.13466 2.32861 6.13265Z" fill="#FFEB3B"></path>
-																	<path d="M18.1403 7.39844C18.7982 7.81461 19.0387 8.54145 19.0478 9.24609C19.0585 10.0923 18.6848 10.7738 18.0109 11.2318C16.545 12.2279 12.034 15.0052 12.034 15.0052C10.9506 15.6976 9.53548 14.9128 9.53548 13.6195V13.2032C9.53598 13.0794 9.48729 12.9605 9.40012 12.8726C9.31295 12.7847 9.19444 12.735 9.07064 12.7345H2.32861C1.83334 12.7324 1.35917 12.5337 1.01038 12.1821C0.661596 11.8305 0.466772 11.3547 0.468765 10.8595V12.0729C0.466762 12.5682 0.661582 13.0439 1.01037 13.3956C1.35916 13.7472 1.83334 13.9459 2.32861 13.9479H9.53564V14.9865C9.53564 16.2798 10.9507 17.0646 12.0342 16.3722L18.1514 12.4631C19.9961 11.2844 19.9901 8.56898 18.1403 7.39844Z" fill="#FB9300"></path>
-																	<path d="M18.2656 7.19922L12.3313 3.44399C12.0348 3.25306 11.6919 3.14647 11.3394 3.13568C10.9869 3.12488 10.6381 3.21027 10.3304 3.3827C10.0163 3.55317 9.75452 3.80595 9.57317 4.11393C9.39182 4.4219 9.29775 4.77344 9.30105 5.13083V5.66297C9.30149 5.72459 9.27748 5.78387 9.23427 5.82781C9.19107 5.87174 9.1322 5.89675 9.07059 5.89735H2.32855C1.17383 5.89735 0.234375 6.84364 0.234375 8.00672V12.0718C0.234375 13.2348 1.17383 14.1811 2.32855 14.1811H9.30121V14.9854C9.29801 15.3224 9.38686 15.6539 9.55818 15.9442C9.72951 16.2345 9.97681 16.4725 10.2734 16.6326C10.564 16.7947 10.8932 16.8744 11.2257 16.8631C11.5582 16.8518 11.8813 16.7499 12.1602 16.5686L18.2775 12.6596C18.735 12.3654 19.1111 11.9609 19.3711 11.4832C19.6312 11.0055 19.7669 10.4701 19.7657 9.92623C19.7646 9.38236 19.6266 8.84753 19.3644 8.37098C19.1023 7.89444 18.7245 7.49151 18.2658 7.1993L18.2656 7.19922ZM9.30117 13.7124H2.32855C1.91661 13.7101 1.52073 13.5523 1.22022 13.2705C0.919709 12.9887 0.736756 12.6038 0.708008 12.1929C0.903292 12.4346 1.15015 12.6297 1.43054 12.7638C1.71092 12.8978 2.01773 12.9675 2.32852 12.9678H9.07031C9.13198 12.9683 9.19092 12.9933 9.2342 13.0372C9.27748 13.0812 9.30157 13.1405 9.30117 13.2022V13.7124ZM9.07031 12.499H2.32852C1.89557 12.4965 1.4813 12.3224 1.17659 12.0148C0.871881 11.7072 0.701607 11.2914 0.703125 10.8584V8.00684C0.701607 7.57389 0.871886 7.15801 1.17661 6.85044C1.48133 6.54287 1.8956 6.36873 2.32855 6.36622H9.07051C9.2564 6.36547 9.43441 6.29103 9.56549 6.15922C9.69657 6.0274 9.77002 5.84898 9.76973 5.66309V5.13083C9.76706 4.85746 9.83888 4.58854 9.97748 4.3529C10.1161 4.11727 10.3162 3.92382 10.5564 3.79333C10.7908 3.66201 11.0565 3.597 11.325 3.60526C11.5936 3.61351 11.8548 3.69473 12.0806 3.8402C12.1495 3.88493 18.0038 7.58629 18.068 7.63024C18.7035 8.0686 18.8083 8.83168 18.8132 9.24786C18.8229 9.99618 18.4999 10.6148 17.8791 11.0369C16.4343 12.0185 11.9562 14.7764 11.9111 14.8041C11.91 14.8048 11.9089 14.8055 11.9078 14.8062C11.6995 14.9417 11.4583 15.0179 11.21 15.0263C10.9617 15.0348 10.7157 14.9753 10.4988 14.8543C10.2763 14.7341 10.0908 14.5555 9.96236 14.3376C9.83393 14.1198 9.76739 13.871 9.76992 13.6182V13.2022C9.77018 13.0162 9.69667 12.8377 9.56551 12.7059C9.43435 12.5741 9.25626 12.4997 9.07031 12.499ZM19.2969 9.92704C19.2999 10.3924 19.1848 10.851 18.9624 11.2598C18.74 11.6686 18.4175 12.0143 18.0252 12.2645L11.908 16.1736C11.6997 16.3091 11.4584 16.3851 11.2101 16.3936C10.9617 16.402 10.7158 16.3425 10.4988 16.2215C10.2763 16.1013 10.0909 15.9227 9.96241 15.7048C9.83396 15.487 9.7674 15.2382 9.76992 14.9854V14.8663C9.91388 15.0271 10.0843 15.1622 10.2738 15.2655C10.5641 15.4274 10.8929 15.507 11.2251 15.4959C11.5572 15.4847 11.88 15.3832 12.1588 15.2023C12.2662 15.1361 16.6997 12.4051 18.1431 11.4245C18.8142 10.9682 19.1997 10.3232 19.2705 9.54676C19.2878 9.67278 19.2967 9.79983 19.2969 9.92704Z" fill="#110A00"></path>
-																</svg> </span>
-															<span class="elementor-button-text">Home</span>
-														</span>
-													</a>
-												</div>
-											</div>
-										
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-f205839 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit form-mailchimp-style-default elementor-widget elementor-widget-yumyum-mailchmip" data-id="f205839" data-element_type="widget" data-widget_type="yumyum-mailchmip.default">
-									
-								</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-cf49021 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated bounceInRight" data-id="cf49021" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;bounceInRight&quot;}" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img width="446" height="459" src="wp-content/uploads/2024/09/img-ft-6-min.png" class="attachment-full size-full wp-image-683" alt="" srcset="wp-content/uploads/2024/09/img-ft-6-min.png 446w, wp-content/uploads/2024/09/img-ft-6-min-292x300.png 292w, wp-content/uploads/2024/09/img-ft-6-min-50x50.png 50w" sizes="(max-width: 446px) 100vw, 446px">
-								</div>
+		<div class='footer-width-fixer'>
+			<div data-elementor-type="wp-post" data-elementor-id="258" class="elementor elementor-258">
+				<div class="elementor-element elementor-element-d22da3f e-con-full e-flex e-con e-parent e-lazyloaded"
+					data-id="d22da3f" data-element_type="container"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;yumyum-top&quot;}">
+					<div class="elementor-shape elementor-shape-top" data-negative="false">
+						<svg width="1920" height="24" viewBox="0 0 1920 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path class="elementor-shape-fill"
+								d="M0 12.0832C0 -1.6198 1.222 -1.7098 35.835 9.4422C70.526 20.6192 99.241 20.9942 128 10.6462C156.216 0.492203 183.448 0.403202 214.4 10.3642C246.204 20.5992 273.035 20.6662 302.4 10.5822C331.584 0.561203 358.524 0.585203 390.4 10.6622C421.431 20.4712 445.935 20.4202 476.8 10.4832C507.8 0.502203 532.211 0.480202 563.2 10.4032C595.184 20.6442 621.939 20.6652 651.2 10.4692C680.383 0.300203 707.451 0.305202 737.6 10.4832C767.594 20.6092 794.764 20.6492 824 10.6112C853.851 0.363203 880.688 0.287205 912 10.3642C943.963 20.6502 970.689 20.6822 1000 10.4692C1029.33 0.247204 1056.32 0.287203 1086.4 10.5972C1115.9 20.7092 1143.13 20.7482 1172.59 10.7212C1200.59 1.1912 1221.67 1.1672 1249.81 10.6322C1280.06 20.8052 1310.04 20.8332 1337.6 10.7132C1365.93 0.309204 1395.71 0.255203 1425.6 10.5552C1455.25 20.7732 1482.3 20.7812 1512 10.5822C1541.51 0.448204 1568.68 0.412205 1598.4 10.4682C1628.06 20.5002 1655.02 20.4842 1686.4 10.4172C1717.42 0.465202 1741.82 0.472202 1772.8 10.4412C1803.32 20.2622 1833.99 20.4372 1860.34 10.9432C1870.65 7.2292 1888.29 3.2482 1899.55 2.0952L1920 -0.000797272V23.2832H0V12.0832Z"
+								fill="#FB9300" fill-opacity="0.25"></path>
+						</svg>
+					</div>
+					<div class="elementor-element elementor-element-851ba47 e-con-full e-flex e-con e-child"
+						data-id="851ba47" data-element_type="container"
+						data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-element elementor-element-45a219d elementor-absolute animated-fast elementor-widget elementor-widget-image animated slideInUp"
+							data-id="45a219d" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;slideInUp&quot;}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="414" height="395" src="wp-content/uploads/2024/09/img-ft-5-min.png"
+									class="attachment-full size-full wp-image-682" alt=""
+									srcset="wp-content/uploads/2024/09/img-ft-5-min.png 414w, wp-content/uploads/2024/09/img-ft-5-min-300x286.png 300w"
+									sizes="(max-width: 414px) 100vw, 414px">
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-451d077 e-flex e-con-boxed e-con e-child" data-id="451d077" data-element_type="container">
-							<div class="e-con-inner">
-								<div class="elementor-element elementor-element-46b8af9 e-con-full e-flex e-con e-child" data-id="46b8af9" data-element_type="container">
-									<div class="elementor-element elementor-element-fa4d03f elementor-widget elementor-widget-yumyum-site-logo" data-id="fa4d03f" data-element_type="widget" data-widget_type="yumyum-site-logo.default">
+						<div class="elementor-element elementor-element-5e08526 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated pavo-move-down"
+							data-id="5e08526" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;pavo-move-down&quot;,&quot;_animation_delay&quot;:300}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="93" height="103" src="wp-content/uploads/2024/09/img-ft-4-min.png"
+									class="attachment-full size-full wp-image-681" alt="">
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-bf89074 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image animated rubberBand"
+							data-id="bf89074" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;rubberBand&quot;,&quot;_animation_delay&quot;:300}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="149" height="134" src="wp-content/uploads/2024/09/img-ft-2-min.png"
+									class="attachment-full size-full wp-image-679" alt="">
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-2315b78 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated fadeInLeft"
+							data-id="2315b78" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_animation_delay&quot;:400}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="103" height="105" src="wp-content/uploads/2024/09/img-ft-3-min.png"
+									class="attachment-full size-full wp-image-680" alt=""
+									srcset="wp-content/uploads/2024/09/img-ft-3-min.png 103w, wp-content/uploads/2024/09/img-ft-3-min-50x50.png 50w"
+									sizes="(max-width: 103px) 100vw, 103px">
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-60b379f elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated zoomIn"
+							data-id="60b379f" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:600}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="59" height="67" src="wp-content/uploads/2024/09/img-ft-1-min.png"
+									class="attachment-full size-full wp-image-678" alt="">
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-5e13783 e-con-full e-flex e-con e-child"
+							data-id="5e13783" data-element_type="container">
+							<div class="elementor-element elementor-element-17d8805 elementor-widget elementor-widget-heading"
+								data-id="17d8805" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-widget-container">
+									<h2 class="elementor-heading-title elementor-size-default">want to go back?
+									</h2>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-0eeeaf2 elementor-widget-tablet__width-initial elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-text-editor"
+								data-id="0eeeaf2" data-element_type="widget" data-widget_type="text-editor.default">
+
+								<div class="elementor-widget-container">
+									<div class="elementor-element elementor-element-6503780 elementor-button-outline elementor-widget elementor-widget-button"
+										data-id="6503780" data-element_type="widget" data-widget_type="button.default">
 										<div class="elementor-widget-container">
-											<div class="yumyum-site-logo">
-												<a data-elementor-open-lightbox="" class="elementor-clickable" href="yumyum">
-													<div class="yumyum-site-logo-set">
-														<div class="yumyum-site-logo-container">
-															<img class="yumyum-site-logo-img elementor-animation-" src="wp-content/uploads/2024/09/logo-6.png" alt="logo-3" >
-														</div>
-													</div>
+											<div class="elementor-button-wrapper">
+												<a class="elementor-button elementor-button-link elementor-size-md"
+													href="index.html">
+													<span class="elementor-button-content-wrapper">
+														<span class="elementor-button-icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="20"
+																height="20" viewBox="0 0 20 20" fill="none">
+																<path
+																	d="M2.32861 6.13265H9.07052C9.19432 6.1321 9.31282 6.08241 9.39999 5.99451C9.48716 5.90661 9.53586 5.78769 9.53537 5.6639V5.13171C9.53537 3.74956 11.0447 2.90808 12.2059 3.64292L18.1402 7.3982C19.99 8.56874 19.9959 11.2841 18.1513 12.4629L12.0341 16.3719C10.9506 17.0643 9.53552 16.2795 9.53552 14.9862V13.9476H2.32861C1.83334 13.9456 1.35916 13.747 1.01037 13.3953C0.661582 13.0437 0.466762 12.5679 0.468765 12.0726V8.00765C0.466762 7.51238 0.661582 7.0366 1.01037 6.68497C1.35916 6.33334 1.83334 6.13466 2.32861 6.13265Z"
+																	fill="#FFEB3B"></path>
+																<path
+																	d="M18.1403 7.39844C18.7982 7.81461 19.0387 8.54145 19.0478 9.24609C19.0585 10.0923 18.6848 10.7738 18.0109 11.2318C16.545 12.2279 12.034 15.0052 12.034 15.0052C10.9506 15.6976 9.53548 14.9128 9.53548 13.6195V13.2032C9.53598 13.0794 9.48729 12.9605 9.40012 12.8726C9.31295 12.7847 9.19444 12.735 9.07064 12.7345H2.32861C1.83334 12.7324 1.35917 12.5337 1.01038 12.1821C0.661596 11.8305 0.466772 11.3547 0.468765 10.8595V12.0729C0.466762 12.5682 0.661582 13.0439 1.01037 13.3956C1.35916 13.7472 1.83334 13.9459 2.32861 13.9479H9.53564V14.9865C9.53564 16.2798 10.9507 17.0646 12.0342 16.3722L18.1514 12.4631C19.9961 11.2844 19.9901 8.56898 18.1403 7.39844Z"
+																	fill="#FB9300"></path>
+																<path
+																	d="M18.2656 7.19922L12.3313 3.44399C12.0348 3.25306 11.6919 3.14647 11.3394 3.13568C10.9869 3.12488 10.6381 3.21027 10.3304 3.3827C10.0163 3.55317 9.75452 3.80595 9.57317 4.11393C9.39182 4.4219 9.29775 4.77344 9.30105 5.13083V5.66297C9.30149 5.72459 9.27748 5.78387 9.23427 5.82781C9.19107 5.87174 9.1322 5.89675 9.07059 5.89735H2.32855C1.17383 5.89735 0.234375 6.84364 0.234375 8.00672V12.0718C0.234375 13.2348 1.17383 14.1811 2.32855 14.1811H9.30121V14.9854C9.29801 15.3224 9.38686 15.6539 9.55818 15.9442C9.72951 16.2345 9.97681 16.4725 10.2734 16.6326C10.564 16.7947 10.8932 16.8744 11.2257 16.8631C11.5582 16.8518 11.8813 16.7499 12.1602 16.5686L18.2775 12.6596C18.735 12.3654 19.1111 11.9609 19.3711 11.4832C19.6312 11.0055 19.7669 10.4701 19.7657 9.92623C19.7646 9.38236 19.6266 8.84753 19.3644 8.37098C19.1023 7.89444 18.7245 7.49151 18.2658 7.1993L18.2656 7.19922ZM9.30117 13.7124H2.32855C1.91661 13.7101 1.52073 13.5523 1.22022 13.2705C0.919709 12.9887 0.736756 12.6038 0.708008 12.1929C0.903292 12.4346 1.15015 12.6297 1.43054 12.7638C1.71092 12.8978 2.01773 12.9675 2.32852 12.9678H9.07031C9.13198 12.9683 9.19092 12.9933 9.2342 13.0372C9.27748 13.0812 9.30157 13.1405 9.30117 13.2022V13.7124ZM9.07031 12.499H2.32852C1.89557 12.4965 1.4813 12.3224 1.17659 12.0148C0.871881 11.7072 0.701607 11.2914 0.703125 10.8584V8.00684C0.701607 7.57389 0.871886 7.15801 1.17661 6.85044C1.48133 6.54287 1.8956 6.36873 2.32855 6.36622H9.07051C9.2564 6.36547 9.43441 6.29103 9.56549 6.15922C9.69657 6.0274 9.77002 5.84898 9.76973 5.66309V5.13083C9.76706 4.85746 9.83888 4.58854 9.97748 4.3529C10.1161 4.11727 10.3162 3.92382 10.5564 3.79333C10.7908 3.66201 11.0565 3.597 11.325 3.60526C11.5936 3.61351 11.8548 3.69473 12.0806 3.8402C12.1495 3.88493 18.0038 7.58629 18.068 7.63024C18.7035 8.0686 18.8083 8.83168 18.8132 9.24786C18.8229 9.99618 18.4999 10.6148 17.8791 11.0369C16.4343 12.0185 11.9562 14.7764 11.9111 14.8041C11.91 14.8048 11.9089 14.8055 11.9078 14.8062C11.6995 14.9417 11.4583 15.0179 11.21 15.0263C10.9617 15.0348 10.7157 14.9753 10.4988 14.8543C10.2763 14.7341 10.0908 14.5555 9.96236 14.3376C9.83393 14.1198 9.76739 13.871 9.76992 13.6182V13.2022C9.77018 13.0162 9.69667 12.8377 9.56551 12.7059C9.43435 12.5741 9.25626 12.4997 9.07031 12.499ZM19.2969 9.92704C19.2999 10.3924 19.1848 10.851 18.9624 11.2598C18.74 11.6686 18.4175 12.0143 18.0252 12.2645L11.908 16.1736C11.6997 16.3091 11.4584 16.3851 11.2101 16.3936C10.9617 16.402 10.7158 16.3425 10.4988 16.2215C10.2763 16.1013 10.0909 15.9227 9.96241 15.7048C9.83396 15.487 9.7674 15.2382 9.76992 14.9854V14.8663C9.91388 15.0271 10.0843 15.1622 10.2738 15.2655C10.5641 15.4274 10.8929 15.507 11.2251 15.4959C11.5572 15.4847 11.88 15.3832 12.1588 15.2023C12.2662 15.1361 16.6997 12.4051 18.1431 11.4245C18.8142 10.9682 19.1997 10.3232 19.2705 9.54676C19.2878 9.67278 19.2967 9.79983 19.2969 9.92704Z"
+																	fill="#110A00"></path>
+															</svg> </span>
+														<span class="elementor-button-text">Home</span>
+													</span>
 												</a>
 											</div>
 										</div>
-									</div>
-									
-									<div class="elementor-element elementor-element-4e1e06c elementor-widget elementor-widget-text-editor" data-id="4e1e06c" data-element_type="widget" data-widget_type="text-editor.default">
-										<div class="elementor-widget-container">
-											shriwar@pizzaiiolo.com
-										</div>
-									</div>
-									<div class="elementor-element elementor-element-6fa779e elementor-widget elementor-widget-heading" data-id="6fa779e" data-element_type="widget" data-widget_type="heading.default">
-										<div class="elementor-widget-container">
-											<h2 class="elementor-heading-title elementor-size-default"><a href="tel:+(084)%20456-0789">+(084) 456-0789</a></h2>
-										</div>
+
 									</div>
 								</div>
-								<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child" data-id="f78293f" data-element_type="container">
-									
-								</div>
-								
-								<div class="elementor-element elementor-element-5c0a22a e-con-full e-flex e-con e-child" data-id="5c0a22a" data-element_type="container">
-									<div class="elementor-element elementor-element-9460c93 elementor-widget elementor-widget-heading" data-id="9460c93" data-element_type="widget" data-widget_type="heading.default">
-										<div class="elementor-widget-container">
-											<h2 class="elementor-heading-title elementor-size-default">QUICK LINKS</h2>
-										</div>
-									</div>
-									<div class="elementor-element elementor-element-9d2b82a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="9d2b82a" data-element_type="widget" data-widget_type="icon-list.default">
-										<div class="elementor-widget-container">
-											<ul class="elementor-icon-list-items">
-												<li class="elementor-icon-list-item">
-													<a href="index.html">
+								<div class="elementor-element elementor-element-f205839 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit form-mailchimp-style-default elementor-widget elementor-widget-yumyum-mailchmip"
+									data-id="f205839" data-element_type="widget"
+									data-widget_type="yumyum-mailchmip.default">
 
-														<span class="elementor-icon-list-text">Home</span>
-													</a>
-												</li>
-												<li class="elementor-icon-list-item">
-													<a href="menu.html">
-
-														<span class="elementor-icon-list-text">Menu</span>
-													</a>
-												</li>
-												<li class="elementor-icon-list-item">
-													<a href="awards.html">
-
-														<span class="elementor-icon-list-text">awards</span>
-													</a>
-												</li>
-												<li class="elementor-icon-list-item">
-													<a href="contact.html">
-
-														<span class="elementor-icon-list-text">Contact</span>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-
-								<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child" data-id="f78293f" data-element_type="container">
-									
-								</div>
-								<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child" data-id="f78293f" data-element_type="container">
-									<div class="elementor-element elementor-element-65f1281 elementor-widget elementor-widget-heading" data-id="65f1281" data-element_type="widget" data-widget_type="heading.default">
-										<div class="elementor-widget-container">
-											<h2 class="elementor-heading-title elementor-size-default">OPENING HOURS
-											</h2>
-										</div>
-									</div>
-									<div class="elementor-element elementor-element-66a9b7e e-con-full e-flex e-con e-child" data-id="66a9b7e" data-element_type="container">
-										<div class="elementor-element elementor-element-85e8710 e-con-full e-flex e-con e-child" data-id="85e8710" data-element_type="container">
-											<div class="elementor-element elementor-element-dd7b8a7 elementor-widget elementor-widget-text-editor" data-id="dd7b8a7" data-element_type="widget" data-widget_type="text-editor.default">
-												<div class="elementor-widget-container">
-													Every Day: </div>
-											</div>
-											<div class="elementor-element elementor-element-a7dcb7f elementor-widget elementor-widget-text-editor" data-id="a7dcb7f" data-element_type="widget" data-widget_type="text-editor.default">
-												<div class="elementor-widget-container">
-													11 am - 11 pm </div>
-											</div>
-										</div>
-										
-									</div>
 								</div>
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-b6efe30 e-flex e-con-boxed e-con e-child" data-id="b6efe30" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-							<div class="e-con-inner">
-								<div class="elementor-element elementor-element-e11810f e-con-full e-flex e-con e-child" data-id="e11810f" data-element_type="container">
-									<div class="elementor-element elementor-element-871ab7a e-con-full e-flex e-con e-child" data-id="871ab7a" data-element_type="container">
-										<div class="elementor-element elementor-element-c2b4c74 elementor-widget elementor-widget-text-editor" data-id="c2b4c74" data-element_type="widget" data-widget_type="text-editor.default">
-											<div class="elementor-widget-container">
-												©2024 </div>
-										</div>
-										<div class="elementor-element elementor-element-856a358 elementor-widget elementor-widget-text-editor" data-id="856a358" data-element_type="widget" data-widget_type="text-editor.default">
-											<div class="elementor-widget-container">
-												<a href="index.html" target="_blank" rel="noopener">PIZZAIIOLO.</a>
-											</div>
-										</div>
-										<div class="elementor-element elementor-element-18e3e2b elementor-widget elementor-widget-text-editor" data-id="18e3e2b" data-element_type="widget" data-widget_type="text-editor.default">
-											<div class="elementor-widget-container">
-												All Rights Reserved </div>
+						<div class="elementor-element elementor-element-cf49021 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image animated bounceInRight"
+							data-id="cf49021" data-element_type="widget"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;bounceInRight&quot;}"
+							data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img width="446" height="459" src="wp-content/uploads/2024/09/img-ft-6-min.png"
+									class="attachment-full size-full wp-image-683" alt=""
+									srcset="wp-content/uploads/2024/09/img-ft-6-min.png 446w, wp-content/uploads/2024/09/img-ft-6-min-292x300.png 292w, wp-content/uploads/2024/09/img-ft-6-min-50x50.png 50w"
+									sizes="(max-width: 446px) 100vw, 446px">
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-451d077 e-flex e-con-boxed e-con e-child"
+						data-id="451d077" data-element_type="container">
+						<div class="e-con-inner">
+							<div class="elementor-element elementor-element-46b8af9 e-con-full e-flex e-con e-child"
+								data-id="46b8af9" data-element_type="container">
+								<div class="elementor-element elementor-element-fa4d03f elementor-widget elementor-widget-yumyum-site-logo"
+									data-id="fa4d03f" data-element_type="widget"
+									data-widget_type="yumyum-site-logo.default">
+									<div class="elementor-widget-container">
+										<div class="yumyum-site-logo">
+											<a data-elementor-open-lightbox="" class="elementor-clickable"
+												href="yumyum">
+												<div class="yumyum-site-logo-set">
+													<div class="yumyum-site-logo-container">
+														<img class="yumyum-site-logo-img elementor-animation-"
+															src="wp-content/uploads/2024/09/logo-6.png" alt="logo-3">
+													</div>
+												</div>
+											</a>
 										</div>
 									</div>
-									
-									<div class="elementor-element elementor-element-85add6d e-con-full elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con e-child" data-id="85add6d" data-element_type="container">
-										<div class="elementor-element elementor-element-a345ea1 elementor-widget elementor-widget-text-editor" data-id="a345ea1" data-element_type="widget" data-widget_type="text-editor.default">
+								</div>
+
+								<div class="elementor-element elementor-element-4e1e06c elementor-widget elementor-widget-text-editor"
+									data-id="4e1e06c" data-element_type="widget" data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										shriwar@pizzaiiolo.com
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-6fa779e elementor-widget elementor-widget-heading"
+									data-id="6fa779e" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default"><a
+												href="tel:+(084)%20456-0789">+(084) 456-0789</a></h2>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+
+							</div>
+
+							<div class="elementor-element elementor-element-5c0a22a e-con-full e-flex e-con e-child"
+								data-id="5c0a22a" data-element_type="container">
+								<div class="elementor-element elementor-element-9460c93 elementor-widget elementor-widget-heading"
+									data-id="9460c93" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">QUICK LINKS</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-9d2b82a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+									data-id="9d2b82a" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<a href="index.html">
+
+													<span class="elementor-icon-list-text">Home</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="menu.html">
+
+													<span class="elementor-icon-list-text">Menu</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="awards.html">
+
+													<span class="elementor-icon-list-text">awards</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="contact.html">
+
+													<span class="elementor-icon-list-text">Contact</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+
+							</div>
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+								<div class="elementor-element elementor-element-65f1281 elementor-widget elementor-widget-heading"
+									data-id="65f1281" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">OPENING HOURS
+										</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-66a9b7e e-con-full e-flex e-con e-child"
+									data-id="66a9b7e" data-element_type="container">
+									<div class="elementor-element elementor-element-85e8710 e-con-full e-flex e-con e-child"
+										data-id="85e8710" data-element_type="container">
+										<div class="elementor-element elementor-element-dd7b8a7 elementor-widget elementor-widget-text-editor"
+											data-id="dd7b8a7" data-element_type="widget"
+											data-widget_type="text-editor.default">
 											<div class="elementor-widget-container">
-												Follow Us: </div>
+												Every Day: </div>
 										</div>
-										<div class="elementor-element elementor-element-f8b589b elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="f8b589b" data-element_type="widget" data-widget_type="social-icons.default">
+										<div class="elementor-element elementor-element-a7dcb7f elementor-widget elementor-widget-text-editor"
+											data-id="a7dcb7f" data-element_type="widget"
+											data-widget_type="text-editor.default">
 											<div class="elementor-widget-container">
-												<div class="elementor-social-icons-wrapper elementor-grid">
-													
-													<span class="elementor-grid-item">
-														<a class="elementor-icon elementor-social-icon elementor-social-icon-yumyum-icon-instagram elementor-repeater-item-7de4a19" href="https://www.instagram.com/pizzaiiolo.india/" target="_blank">
-															<span class="elementor-screen-only">Yumyum-icon-instagram</span>
-															<i class="yumyum-icon- yumyum-icon-instagram"></i> </a>
-													</span>
-												</div>
+												11 am - 11 pm </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-b6efe30 e-flex e-con-boxed e-con e-child"
+						data-id="b6efe30" data-element_type="container"
+						data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="e-con-inner">
+							<div class="elementor-element elementor-element-e11810f e-con-full e-flex e-con e-child"
+								data-id="e11810f" data-element_type="container">
+								<div class="elementor-element elementor-element-871ab7a e-con-full e-flex e-con e-child"
+									data-id="871ab7a" data-element_type="container">
+									<div class="elementor-element elementor-element-c2b4c74 elementor-widget elementor-widget-text-editor"
+										data-id="c2b4c74" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											©2024 </div>
+									</div>
+									<div class="elementor-element elementor-element-856a358 elementor-widget elementor-widget-text-editor"
+										data-id="856a358" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<a href="index.html" target="_blank" rel="noopener">PIZZAIIOLO.</a>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-18e3e2b elementor-widget elementor-widget-text-editor"
+										data-id="18e3e2b" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											All Rights Reserved </div>
+									</div>
+								</div>
+
+								<div class="elementor-element elementor-element-85add6d e-con-full elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con e-child"
+									data-id="85add6d" data-element_type="container">
+									<div class="elementor-element elementor-element-a345ea1 elementor-widget elementor-widget-text-editor"
+										data-id="a345ea1" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											Follow Us: </div>
+									</div>
+									<div class="elementor-element elementor-element-f8b589b elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons"
+										data-id="f8b589b" data-element_type="widget"
+										data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-yumyum-icon-instagram elementor-repeater-item-7de4a19"
+														href="https://www.instagram.com/pizzaiiolo.india/"
+														target="_blank">
+														<span class="elementor-screen-only">Yumyum-icon-instagram</span>
+														<i class="yumyum-icon- yumyum-icon-instagram"></i> </a>
+												</span>
 											</div>
 										</div>
 									</div>
@@ -1472,7 +1463,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
 	</div><!-- #page -->
 
@@ -1522,12 +1514,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 							class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-159">
 							<a href="index.html">Home</a>
 						</li>
-						<li
-							class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-180">
+						<li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-180">
 							<a href="menu.html">Menu</a>
 						</li>
-						<li
-							class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170">
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170">
 							<a href="franchise.html">franchise-opportunity</a>
 						</li>
 						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a
@@ -1537,60 +1527,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					</ul>
 				</div>
 			</nav>
-		</div>
-		<div class="yumyum-language-switcher-mobile">
-			<ul class="menu">
-				<li class="item">
-					<div class="language-switcher-head">
-						<img width="20" height="20"
-							src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E"
-							alt="WPML"
-							data-lazy-src="wp-content/themes/yumyum/assets/images/language-switcher/en.jpg"><noscript><img
-								width="20" height="20"
-								src="wp-content/themes/yumyum/assets/images/language-switcher/en.jpg"
-								alt="WPML"></noscript>
-					</div>
-				</li>
-				<li class="item">
-					<div class="language-switcher-img">
-						<a href="#">
-							<img width="75" height="50"
-								src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E"
-								alt="WPML"
-								data-lazy-src="wp-content/themes/yumyum/assets/images/language-switcher/de.jpg"><noscript><img
-									width="75" height="50"
-									src="wp-content/themes/yumyum/assets/images/language-switcher/de.jpg"
-									alt="WPML"></noscript>
-						</a>
-					</div>
-				</li>
-				<li class="item">
-					<div class="language-switcher-img">
-						<a href="#">
-							<img width="88" height="50"
-								src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2088%2050'%3E%3C/svg%3E"
-								alt="WPML"
-								data-lazy-src="wp-content/themes/yumyum/assets/images/language-switcher/it.jpg"><noscript><img
-									width="88" height="50"
-									src="wp-content/themes/yumyum/assets/images/language-switcher/it.jpg"
-									alt="WPML"></noscript>
-						</a>
-					</div>
-				</li>
-				<li class="item">
-					<div class="language-switcher-img">
-						<a href="#">
-							<img width="60" height="50"
-								src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%2050'%3E%3C/svg%3E"
-								alt="WPML"
-								data-lazy-src="wp-content/themes/yumyum/assets/images/language-switcher/hi.jpg"><noscript><img
-									width="60" height="50"
-									src="wp-content/themes/yumyum/assets/images/language-switcher/hi.jpg"
-									alt="WPML"></noscript>
-						</a>
-					</div>
-				</li>
-			</ul>
 		</div>
 	</div>
 	<div class="yumyum-overlay"></div>
@@ -1626,8 +1562,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			<div class="site-search ajax-search">
 				<div class="widget woocommerce widget_product_search">
 					<div class="ajax-search-result d-none"></div>
-					<form role="search" method="get" class="woocommerce-product-search"
-						action="">
+					<form role="search" method="get" class="woocommerce-product-search" action="">
 						<label class="screen-reader-text" for="woocommerce-product-search-field-1">Search for:</label>
 						<input type="search" id="woocommerce-product-search-field-1" class="search-field"
 							placeholder="What are you looking for? " autocomplete="off" value="" name="s" />
@@ -1818,8 +1753,7 @@ for (let j = 0; j < urlFields.length; j++) {
 		href='wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min18be.css?ver=3.25.10'
 		media='all' />
 	<link rel='stylesheet' id='e-animation-zoomIn-css'
-		href='wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min18be.css?ver=3.25.10'
-		media='all' />
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min18be.css?ver=3.25.10' media='all' />
 	<link rel='stylesheet' id='e-animation-bounceInRight-css'
 		href='wp-content/plugins/elementor/assets/lib/animations/styles/bounceInRight.min18be.css?ver=3.25.10'
 		media='all' />
@@ -1911,8 +1845,7 @@ for (let j = 0; j < urlFields.length; j++) {
 	<script id="yumyum-theme-js-extra">
 		var yumyumAjax = { "ajaxurl": "" };
 	</script>
-	<script src="wp-content/themes/yumyum/assets/js/frontend/main.minf269.js?ver=1.0.1"
-		id="yumyum-theme-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/frontend/main.minf269.js?ver=1.0.1" id="yumyum-theme-js"></script>
 	<script src="wp-includes/js/imagesloaded.minbb93.js?ver=5.0.0" id="imagesloaded-js"></script>
 	<script src="wp-content/themes/yumyum/assets/js/skip-link-focus-fix.minf269.js?ver=1.0.1"
 		id="yumyum-skip-link-focus-fix-js"></script>
@@ -1996,20 +1929,7 @@ for (let j = 0; j < urlFields.length; j++) {
 	</script>
 	<script src="wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minea26.js?ver=9.4.2"
 		id="wc-cart-fragments-js" defer data-wp-strategy="defer"></script>
-	<script>window.lazyLoadOptions = { elements_selector: "img[data-lazy-src],.rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }; window.addEventListener('LazyLoad::Initialized', function (e) {
-			var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
-				var observer = new MutationObserver(function (mutations) {
-					var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
-						for (i = 0; i < mutation.addedNodes.length; i++) {
-							if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
-							if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
-							images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
-							if (is_iframe) { iframe_count += 1 }
-						}
-					}); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
-				}); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
-			}
-		}, !1)</script>
+	
 	<script data-no-minify="1" async
 		src="wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
 </body>
