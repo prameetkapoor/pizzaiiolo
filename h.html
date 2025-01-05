@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://rangoliicecream.com/static/css/main.d63cf7c8.css">
+    <script src="https://rangoliicecream.com/static/js/main.7777bbcd.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/59/3a/marker.js"></script>
+    <script src="https://maps.googleapis.com//maps-api-v3/api/js/59/3a/common.js"></script>
+</head>
+
+<body>
+    <div class="connect_section p-1">
+        <div>
+            <h2 class="text-center new_arrival_title" style="opacity: 1; transform: none; will-change: auto;">Connect
+                With Us</h2>
+            <div class="text-center"><img class="text-image pt-4"
+                    src="data:image/png;base64,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"
+                    alt="images" style="max-width: 100%; height: auto; opacity: 1; transform: none; will-change: auto;">
+            </div>
+            <div class="instagram_section d-flex justify-content-center align-items-center  mt-2"><a rel="noreferrer"
+                    class="text-decoration-none  d-flex justify-content-center align-items-center "
+                    href="https://www.instagram.com/rangoliicecream.official?igsh=ZnIyMnNoeGdkcWhw" target="_blank">
+                    <div class="d-flex justify-content-center align-items-center"><img
+                            class="instagram-image cursor-pointer"
+                            src="/static/media/anotherimage.2a3b5267d98583ff7faf03b7682b1334.svg" alt="instagram logo"
+                            tabindex="0" style="opacity: 1; transform: none; will-change: auto;"></div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="text-center instagram_title cursor-pointer"
+                            style="opacity: 1; transform: none; will-change: auto;">RANGOLIICECREAM.OFFICIAL</p>
+                    </div>
+                </a></div>
+        </div>
+        <div class="slick-slider connect-image mt-5 slick-initialized" dir="ltr"><button type="button" data-role="none"
+                class="slick-arrow slick-prev" style="display: block;"> Previous</button>
+            <div class="slick-list">
+                <div class="slick-track" style="width: 5180px; opacity: 1; transform: translate3d(-2960px, 0px, 0px);">
+                    <div data-index="-4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image2.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image3.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image4.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image5.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image1.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image2.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image3.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
+                        style="outline: none; width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image4.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="4" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false"
+                        style="outline: none; width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image5.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="5" tabindex="-1" class="slick-slide slick-active slick-cloned" aria-hidden="false"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image1.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="6" tabindex="-1" class="slick-slide slick-active slick-cloned" aria-hidden="false"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image2.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="7" tabindex="-1" class="slick-slide slick-active slick-cloned" aria-hidden="false"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image3.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image4.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                    <div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                        style="width: 370px;">
+                        <div>
+                            <div class="cursor-pointer d-flex justify-content-center" tabindex="-1"
+                                style="width: 100%; display: inline-block;"><img src="/media/connectwithus/image5.png"
+                                    alt="Rangoli Ice Cream Images"></div>
+                        </div>
+                    </div>
+                </div>
+            </div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">
+                Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

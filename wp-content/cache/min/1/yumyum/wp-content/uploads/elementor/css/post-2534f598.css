@@ -1,0 +1,68 @@
+.elementor-2534 .elementor-element.elementor-element-147bd74 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+  --align-items: center;
+  --background-transition: 0.3s;
+  --overlay-opacity: 0.4;
+  --padding-top: 126px;
+  --padding-bottom: 127px;
+  --padding-left: 30px;
+  --padding-right: 30px;
+}
+.elementor-2534
+  .elementor-element.elementor-element-147bd74:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url(../../../../../../../../uploads/2024/09/brc-page-min.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.elementor-2534 .elementor-element.elementor-element-147bd74::before,
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .elementor-background-video-container::before,
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .e-con-inner
+  > .elementor-background-video-container::before,
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .elementor-background-slideshow::before,
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .e-con-inner
+  > .elementor-background-slideshow::before,
+.elementor-2534
+  .elementor-element.elementor-element-147bd74
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer::before {
+  background-color: #000;
+  --background-overlay: "";
+}
+.elementor-2534 .elementor-element.elementor-element-147bd74,
+.elementor-2534 .elementor-element.elementor-element-147bd74::before {
+  --border-transition: 0.3s;
+}
+.elementor-2534 .elementor-element.elementor-element-79441a8 .breadcrumb {
+  color: #fff;
+  text-align: center;
+}
+.elementor-2534 .elementor-element.elementor-element-79441a8 .breadcrumb a {
+  color: #fff;
+}
+.elementor-2534 .elementor-element.elementor-element-79441a8 .yumyum-title {
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,1 @@
+!function(o){o(window).on("elementor/frontend/init",()=>{elementorFrontend.hooks.addAction("frontend/element_ready/yumyum-products-picker.default",t=>{var n=t.find("form.cart input.qty");let e=t.find(".add_to_cart_button");n.on("change",function(){var t=o(this).val();e.attr("data-quantity",t)})})})}(jQuery);

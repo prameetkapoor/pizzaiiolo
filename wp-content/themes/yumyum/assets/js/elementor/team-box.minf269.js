@@ -1,0 +1,1 @@
+jQuery(window).on("elementor/frontend/init",()=>{elementorFrontend.hooks.addAction("frontend/element_ready/yumyum-team-box.default",e=>{elementorFrontend.elementsHandler.addHandler(yumyumSwiperBase,{$element:e})})});

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("../fonts/ClashGrotesk.eot");
+  src: url("../fonts/ClashGrotesk.eot") format("embedded-opentype"), url("../fonts/ClashGrotesk.woff2") format("woff2"), url("../fonts/ClashGrotesk.woff") format("woff"), url("../fonts/ClashGrotesk.ttf") format("truetype"), url("../fonts/ClashGrotesk.svg#ClashGrotesk") format("svg");
+}
+
+/*# sourceMappingURL=font-face.css.map */

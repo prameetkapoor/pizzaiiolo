@@ -1,0 +1,1 @@
+!function(n){n(window).on("elementor/frontend/init",()=>{elementorFrontend.hooks.addAction("frontend/element_ready/yumyum-testimonials.default",e=>{0<n(".yumyum-swiper-wrapper",e).length&&elementorFrontend.elementsHandler.addHandler(yumyumSwiperBase,{$element:e})})})}(jQuery);

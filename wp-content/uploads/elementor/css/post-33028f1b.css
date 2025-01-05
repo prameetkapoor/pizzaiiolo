@@ -1,0 +1,89 @@
+.elementor-3302 .elementor-element.elementor-element-0fbfce2 {
+  --display: flex;
+  --background-transition: 0.3s;
+  --overlay-opacity: 0.4;
+  --padding-top: 126px;
+  --padding-bottom: 126px;
+  --padding-left: 30px;
+  --padding-right: 30px;
+}
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("../../2024/09/pizza-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.elementor-3302 .elementor-element.elementor-element-0fbfce2::before,
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .elementor-background-video-container::before,
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .e-con-inner
+  > .elementor-background-video-container::before,
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .elementor-background-slideshow::before,
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .e-con-inner
+  > .elementor-background-slideshow::before,
+.elementor-3302
+  .elementor-element.elementor-element-0fbfce2
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer::before {
+  background-color: #000000;
+  --background-overlay: "";
+}
+.elementor-3302 .elementor-element.elementor-element-0fbfce2,
+.elementor-3302 .elementor-element.elementor-element-0fbfce2::before {
+  --border-transition: 0.3s;
+}
+.elementor-3302 .elementor-element.elementor-element-13e8a34 .breadcrumb {
+  color: #ffffff;
+  text-align: center;
+}
+.elementor-3302 .elementor-element.elementor-element-13e8a34 .breadcrumb a {
+  color: #ffffff;
+}
+.elementor-3302
+  .elementor-element.elementor-element-13e8a34
+  .breadcrumb
+  a:hover {
+  color: #ffffff;
+}
+.elementor-3302 .elementor-element.elementor-element-13e8a34 .yumyum-title {
+  text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .elementor-3302 .elementor-element.elementor-element-0fbfce2 {
+    --padding-top: 100px;
+    --padding-bottom: 100px;
+    --padding-left: 30px;
+    --padding-right: 30px;
+  }
+}
+@media (max-width: 880px) {
+  .elementor-3302 .elementor-element.elementor-element-0fbfce2 {
+    --padding-top: 80px;
+    --padding-bottom: 80px;
+    --padding-left: 30px;
+    --padding-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-3302 .elementor-element.elementor-element-0fbfce2 {
+    --padding-top: 60px;
+    --padding-bottom: 60px;
+    --padding-left: 15px;
+    --padding-right: 15px;
+  }
+}

@@ -1,0 +1,68 @@
+.elementor-908 .elementor-element.elementor-element-8152bb9 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+  --align-items: center;
+  --background-transition: 0.3s;
+  --overlay-opacity: 0.4;
+  --padding-top: 126px;
+  --padding-bottom: 127px;
+  --padding-left: 30px;
+  --padding-right: 30px;
+}
+.elementor-908
+  .elementor-element.elementor-element-8152bb9:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("../../2024/09/brc-blog-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.elementor-908 .elementor-element.elementor-element-8152bb9::before,
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .elementor-background-video-container::before,
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .e-con-inner
+  > .elementor-background-video-container::before,
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .elementor-background-slideshow::before,
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .e-con-inner
+  > .elementor-background-slideshow::before,
+.elementor-908
+  .elementor-element.elementor-element-8152bb9
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer::before {
+  background-color: #000000;
+  --background-overlay: "";
+}
+.elementor-908 .elementor-element.elementor-element-8152bb9,
+.elementor-908 .elementor-element.elementor-element-8152bb9::before {
+  --border-transition: 0.3s;
+}
+.elementor-908 .elementor-element.elementor-element-3b7de7c .breadcrumb {
+  color: #ffffff;
+  text-align: center;
+}
+.elementor-908 .elementor-element.elementor-element-3b7de7c .breadcrumb a {
+  color: #ffffff;
+}
+.elementor-908 .elementor-element.elementor-element-3b7de7c .yumyum-title {
+  text-align: center;
+  color: #ffffff;
+}

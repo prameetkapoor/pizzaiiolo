@@ -1,0 +1,1 @@
+!function(e){e(".text-editor-hover").each(function(){var t=e(this).find(".elementor-text-editor > *").text();e(this).find(".elementor-text-editor  > *").attr("data-hover",t)})}(jQuery);
