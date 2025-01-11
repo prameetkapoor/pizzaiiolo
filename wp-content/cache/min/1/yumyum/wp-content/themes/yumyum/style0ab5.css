@@ -2369,7 +2369,7 @@ ul.menu li.current-menu-parent > a {
 }
 .main-navigation ul.menu > li.menu-item {
   display: inline-block;
-  padding: 32px 18px;
+  padding: 32px 11px;
 }
 .main-navigation ul.menu > li.menu-item:first-child {
   padding-left: 0 !important;

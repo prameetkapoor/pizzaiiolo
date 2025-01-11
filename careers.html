@@ -1,0 +1,1607 @@
+<!doctype html>
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+	<script>class RocketLazyLoadScripts { constructor(e) { this.triggerEvents = e, this.eventOptions = { passive: !0 }, this.userEventListener = this.triggerListener.bind(this), this.delayedScripts = { normal: [], async: [], defer: [] }, this.allJQueries = [] } _addUserInteractionListener(e) { this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventListener, e.eventOptions))) } _removeUserInteractionListener(e) { this.triggerEvents.forEach((t => window.removeEventListener(t, e.userEventListener, e.eventOptions))) } triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } async _loadEverythingNow() { this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async), await this._triggerDOMContentLoaded(), await this._triggerWindowLoad(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")) } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => { e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) })) } async _transformScript(e) { return await this._requestAnimFrame(), new Promise((t => { const n = document.createElement("script"); let r;[...e.attributes].forEach((e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type", r = e.nodeValue), n.setAttribute(t, e.nodeValue)) })), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t()), e.parentNode.replaceChild(n, e) })) } async _loadScriptsFromList(e) { const t = e.shift(); return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { var e = document.createDocumentFragment();[...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async].forEach((t => { const n = t.getAttribute("src"); if (n) { const t = document.createElement("link"); t.href = n, t.rel = "preload", t.as = "script", e.appendChild(t) } })), document.head.appendChild(e) } _delayEventListeners() { let e = {}; function t(t, n) { !function (t) { function n(n) { return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n } e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(n) } function n(e, t) { let n = e[t]; Object.defineProperty(e, t, { get: () => n || function () { }, set(r) { e["rocket" + t] = n = r } }) } t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t = window.jQuery; Object.defineProperty(window, "jQuery", { get: () => t, set(n) { if (n && n.fn && !e.allJQueries.includes(n)) { n.fn.ready = n.fn.init.prototype.ready = function (t) { e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n))) }; const t = n.fn.on; n.fn.on = n.fn.init.prototype.on = function () { if (this[0] === window) { function e(e) { return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ") } "string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { delete Object.assign(arguments[0], { [e(t)]: arguments[0][t] })[t] })) } return t.apply(this, arguments), this }, e.allJQueries.push(n) } t = n } }) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._requestAnimFrame(), document.rocketonreadystatechange && document.rocketonreadystatechange() } async _triggerWindowLoad() { await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-load")), await this._requestAnimFrame(), window.rocketonload && window.rocketonload(), await this._requestAnimFrame(), this.allJQueries.forEach((e => e(window).trigger("rocket-jquery-load"))), window.dispatchEvent(new Event("rocket-pageshow")), await this._requestAnimFrame(), window.rocketonpageshow && window.rocketonpageshow() } _handleDocumentWrite() { const e = new Map; document.write = document.writeln = function (t) { const n = document.currentScript, r = document.createRange(), i = n.parentElement; let o = e.get(n); void 0 === o && (o = n.nextSibling, e.set(n, o)); const a = document.createDocumentFragment(); r.setStart(a, 0), a.appendChild(r.createContextualFragment(t)), i.insertBefore(a, o) } } async _requestAnimFrame() { return new Promise((e => requestAnimationFrame(e))) } static run() { const e = new RocketLazyLoadScripts(["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"]); e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="xmlrpc.php" />
+	<title>About Us &#8211; Yumyum</title>
+	<meta name='robots' content='max-image-preview:large' />
+	<style>
+		img:is([sizes="auto" i], [sizes^="auto," i]) {
+			contain-intrinsic-size: 3000px 1500px
+		}
+	</style>
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="http://s.w.org/">
+	<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+	<link rel="alternate" type="application/rss+xml" title="Yumyum &raquo; Feed" href="feed/index.html" />
+	<link rel="alternate" type="application/rss+xml" title="Yumyum &raquo; Comments Feed"
+		href="comments/feed/index.html" />
+	
+<style>
+       
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .job-opening {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .job-opening:last-child {
+            border-bottom: none;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            color: white;
+            background-color: #d63031;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .apply-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+	<style id='wp-emoji-styles-inline-css'>
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link data-minify="1" rel='stylesheet' id='yumyum-gutenberg-blocks-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/gutenberg-blocks0ab5.css?ver=1733562605'
+		media='all' />
+	<style id='classic-theme-styles-inline-css'>
+		/*! This file is auto-generated */
+		.wp-block-button__link {
+			color: #fff;
+			background-color: #32373c;
+			border-radius: 9999px;
+			box-shadow: none;
+			text-decoration: none;
+			padding: calc(.667em + 2px) calc(1.333em + 2px);
+			font-size: 1.125em
+		}
+
+		.wp-block-file__button {
+			background: #32373c;
+			color: #fff;
+			text-decoration: none
+		}
+	</style>
+	<style id='global-styles-inline-css'>
+		:root {
+			--wp--preset--aspect-ratio--square: 1;
+			--wp--preset--aspect-ratio--4-3: 4/3;
+			--wp--preset--aspect-ratio--3-4: 3/4;
+			--wp--preset--aspect-ratio--3-2: 3/2;
+			--wp--preset--aspect-ratio--2-3: 2/3;
+			--wp--preset--aspect-ratio--16-9: 16/9;
+			--wp--preset--aspect-ratio--9-16: 9/16;
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--font-size--small: 14px;
+			--wp--preset--font-size--medium: 23px;
+			--wp--preset--font-size--large: 26px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--font-size--normal: 16px;
+			--wp--preset--font-size--huge: 37px;
+			--wp--preset--font-family--inter: "Inter", sans-serif;
+			--wp--preset--font-family--cardo: Cardo;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		:where(.is-layout-grid) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		.is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.is-layout-flex> :is(*, div) {
+			margin: 0;
+		}
+
+		body .is-layout-grid {
+			display: grid;
+		}
+
+		.is-layout-grid> :is(*, div) {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:root :where(.wp-block-pullquote) {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link data-minify="1" rel='stylesheet' id='contact-form-7-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/contact-form-7/includes/css/styles0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/pavo-demo/style0ab5.css?ver=1733562605' media='all' />
+	<style id='woocommerce-inline-inline-css'>
+		.woocommerce form .form-row .required {
+			visibility: visible;
+		}
+	</style>
+	<link rel='stylesheet' id='woo-variation-swatches-css'
+		href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min845d.css?ver=1733196960'
+		media='all' />
+	<style id='woo-variation-swatches-inline-css'>
+		:root {
+			--wvs-tick: url("data:image/svg+xml;utf8,%3Csvg filter='drop-shadow(0px 0px 2px rgb(0 0 0 / .8))' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 30 30'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M4 16L11 23 27 7'/%3E%3C/svg%3E");
+
+			--wvs-cross: url("data:image/svg+xml;utf8,%3Csvg filter='drop-shadow(0px 0px 5px rgb(255 255 255 / .6))' xmlns='http://www.w3.org/2000/svg' width='72px' height='72px' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23ff0000' stroke-linecap='round' stroke-width='0.6' d='M5 5L19 19M19 5L5 19'/%3E%3C/svg%3E");
+			--wvs-single-product-item-width: 30px;
+			--wvs-single-product-item-height: 30px;
+			--wvs-single-product-item-font-size: 16px
+		}
+	</style>
+	<link rel='stylesheet' id='perfect-scrollbar-css'
+		href='wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/perfect-scrollbar.min9704.css?ver=6.7.1'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='perfect-scrollbar-wpc-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/custom-theme0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='woosw-icons-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/woo-smart-wishlist/assets/css/icons0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='woosw-frontend-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/woo-smart-wishlist/assets/css/frontend0ab5.css?ver=1733562605'
+		media='all' />
+	<style id='woosw-frontend-inline-css'>
+		.woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-notice {
+			background-color: #5fbd74;
+		}
+
+		.woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-popup-content-bot-inner a:hover {
+			color: #5fbd74;
+			border-color: #5fbd74;
+		}
+	</style>
+	<link rel='stylesheet' id='yumyum-fonts-css'
+		href='http://fonts.googleapis.com/css2?family=Bangers&amp;family=Quicksand:wght@300..700&amp;subset=latin%2Clatin-ext&amp;display=swap'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-font-face-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/font-face0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-icon-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/icons0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-style-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/style0ab5.css?ver=1733562605' media='all' />
+	<style id='yumyum-style-inline-css'>
+		body {
+			--container-max-width: 1290px;
+			--body-color: #ffffff
+		}
+
+		.e-con {
+			--container-max-width: 1290px
+		}
+	</style>
+	<link data-minify="1" rel='stylesheet' id='elementor-icons-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min0ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css'
+		href='wp-content/uploads/elementor/css/custom-frontend.min002d.css?ver=1733561416' media='all' />
+	<link data-minify="1" rel='stylesheet' id='swiper-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min0ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='e-swiper-css'
+		href='wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min18be.css?ver=3.25.10' media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-6-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-60ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='widget-image-css'
+		href='wp-content/plugins/elementor/assets/css/widget-image.min18be.css?ver=3.25.10' media='all' />
+	<link rel='stylesheet' id='widget-text-editor-css'
+		href='wp-content/plugins/elementor/assets/css/widget-text-editor.min18be.css?ver=3.25.10' media='all' />
+	<link rel='stylesheet' id='widget-heading-css'
+		href='wp-content/plugins/elementor/assets/css/widget-heading.min18be.css?ver=3.25.10' media='all' />
+	<link rel='stylesheet' id='e-animation-fadeInUp-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min18be.css?ver=3.25.10'
+		media='all' />
+	<link rel='stylesheet' id='widget-image-box-css'
+		href='wp-content/uploads/elementor/css/custom-widget-image-box.min002d.css?ver=1733561416' media='all' />
+	<link rel='stylesheet' id='e-shapes-css'
+		href='wp-content/plugins/elementor/assets/css/conditionals/shapes.min18be.css?ver=3.25.10' media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-168-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-168f598.css?ver=1733564894'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-1787-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-17870ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-2534-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-2534f598.css?ver=1733564894'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-258-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-2580ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-4504-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-45040ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-elementor-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/elementor0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-woocommerce-style-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/woocommerce0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='yumyum-child-style-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/demo-child/style0ab5.css?ver=1733562605' media='all' />
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Quicksand%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CBangers%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.7.1'
+		media='all' />
+	<link rel='stylesheet' id='elementor-icons-shared-0-css'
+		href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min0ab5.css?ver=1733562605'
+		media='all' />
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<script src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
+	<script src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+	<script
+		src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min2574.js?ver=2.7.0-wc.9.4.2"
+		id="jquery-blockui-js" data-wp-strategy="defer"></script>
+	
+	<script src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minea26.js?ver=9.4.2"
+		id="wc-add-to-cart-js" defer data-wp-strategy="defer"></script>
+	<script src="wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min3546.js?ver=2.1.4-wc.9.4.2"
+		id="js-cookie-js" data-wp-strategy="defer"></script>
+	<script id="woocommerce-js-extra">
+		var woocommerce_params = { "ajax_url": "\/yumyum\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/yumyum\/?wc-ajax=%%endpoint%%" };
+	</script>
+	<script src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minea26.js?ver=9.4.2"
+		id="woocommerce-js" defer data-wp-strategy="defer"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/libs/jarallax0ab5.js?ver=1733562605"
+		id="jarallax-js"></script>
+	<link rel="https://api.w.org/" href="wp-json/index.html" />
+	<link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/168.json" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+	<meta name="generator" content="WordPress 6.7.1" />
+	<meta name="generator" content="WooCommerce 9.4.2" />
+	<link rel="canonical" href="index.html" />
+	<link rel='shortlink' href='indexada0.html?p=168' />
+	
+
+	<noscript>
+		<style>
+			.woocommerce-product-gallery {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+	<meta name="generator"
+		content="Elementor 3.25.10; features: additional_custom_breakpoints, e_optimized_control_loading, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
+	<style>
+		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+			background-image: none !important;
+		}
+
+		@media screen and (max-height: 1024px) {
+
+			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+				background-image: none !important;
+			}
+		}
+
+		@media screen and (max-height: 640px) {
+
+			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+				background-image: none !important;
+			}
+		}
+	</style>
+	<meta name="generator"
+		content="Powered by Slider Revolution 6.7.23 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+	<style class='wp-fonts-local'>
+		@font-face {
+			font-family: Inter;
+			font-style: normal;
+			font-weight: 300 900;
+			font-display: fallback;
+			src: url('wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt%2cwght.woff2') format('woff2');
+			font-stretch: normal;
+		}
+
+		@font-face {
+			font-family: Cardo;
+			font-style: normal;
+			font-weight: 400;
+			font-display: fallback;
+			src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
+		}
+	</style>
+	<script type="rocketlazyloadscript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+	<noscript>
+		<style id="rocket-lazyload-nojs-css">
+			.rll-youtube-player,
+			[data-lazy-src] {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body
+	class="page-template page-template-template-homepage page-template-template-homepage-php page page-id-168 wp-custom-logo wp-embed-responsive theme-yumyum woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-demo-child wvs-show-label wvs-tooltip woocommerce-active product-block-style-1 etb-header etb-footer etb-template-yumyum etb-stylesheet-demo-child elementor-default elementor-kit-6 elementor-page elementor-page-168">
+
+	<div id="page" class="hfeed site">
+		<header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+			<div data-elementor-type="wp-post" data-elementor-id="1787" class="elementor elementor-1787">
+				<div class="elementor-element elementor-element-85b430e e-con-full e-flex e-con e-parent"
+					data-id="85b430e" data-element_type="container"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-element elementor-element-d90b080 e-con-full e-flex e-con e-child"
+						data-id="d90b080" data-element_type="container">
+						<div class="elementor-element elementor-element-cd86b92 elementor-widget elementor-widget-yumyum-site-logo"
+							data-id="cd86b92" data-element_type="widget" data-widget_type="yumyum-site-logo.default">
+							<div class="elementor-widget-container">
+								<div class="yumyum-site-logo">
+									<a data-elementor-open-lightbox="" class="elementor-clickable" href="index.html">
+										<div class="yumyum-site-logo-set">
+											<div class="yumyum-site-logo-container">
+												<img class="yumyum-site-logo-img elementor-animation-"
+													src="wp-content/uploads/2024/09/logo-6.png" alt="logo-1"
+													style="transform: scale(0.5); transform-origin: top left; padding-top: 7%;" />
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-b45b254 e-con-full e-flex e-con e-child"
+						data-id="b45b254" data-element_type="container">
+						<div class="elementor-element elementor-element-a38a1db elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile yumyum-style-menu-special-divider-no yumyum-nav-menu-sm-divider-no elementor-widget elementor-widget-yumyum-nav-menu"
+							data-id="a38a1db" data-element_type="widget" data-widget_type="yumyum-nav-menu.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-nav-menu-wrapper">
+									<nav class="main-navigation" role="navigation" aria-label="Primary Navigation">
+										<div class="primary-navigation">
+											<ul id="menu-1-b368643" class="menu">
+												<li id="menu-item-159"
+													class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children menu-item-159 has-mega-menu has-stretchwidth">
+													<a href="index.html"><span class="menu-title">Home</span></a>
+												</li>
+												<li id="menu-item-180"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-180 has-mega-menu has-stretchwidth">
+													<a href="menu.html"><span class="menu-title">Menu</span></a>
+												</li>
+												<li id="menu-item-169"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169 ">
+													<a href="awards.html"><span class="menu-title">Awards
+														</span></a>
+												</li>
+												<li id="menu-item-169"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169 ">
+													<a href="about-us.html"><span class="menu-title">About us
+														</span></a>
+												</li>
+												<li id="menu-item-219"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219">
+													<a href="contact.html"><span class="menu-title">Contact</span></a>
+												</li>
+												<li id="menu-item-219"
+													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219 current-menu-ancestor current-menu-parent">
+													<a href="careers.html"><span
+															class="menu-title">Careers</span></a></li>
+												<li id="menu-item-170"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-170">
+													<a href="franchise.html"><span
+															class="menu-title">Franchise-opportunity</span></a>
+												</li>
+												
+												
+												
+											</ul>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-7e935ed elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra yumyum-canvas-menu-layout-2 elementor-widget elementor-widget-yumyum-menu-canvas"
+							data-id="7e935ed" data-element_type="widget" data-widget_type="yumyum-menu-canvas.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-canvas-menu-wrapper">
+									<a href="#" class="menu-mobile-nav-button">
+										<span class="toggle-text screen-reader-text">Menu</span>
+										<div class="yumyum-icon">
+											<span class="icon-1"></span>
+											<span class="icon-2"></span>
+											<span class="icon-3"></span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</header>
+
+		<div class='header-width-fixer'>
+			<div data-elementor-type="wp-post" data-elementor-id="2534" class="elementor elementor-2534">
+				<div class="elementor-element elementor-element-147bd74 e-flex e-con-boxed e-con e-parent"
+					data-id="147bd74" data-element_type="container"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+						<div class="elementor-element elementor-element-79441a8 elementor-widget elementor-widget-yumyum-breadcrumb"
+							data-id="79441a8" data-element_type="widget" data-widget_type="yumyum-breadcrumb.default">
+							<div class="elementor-widget-container">
+								<div class="breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+									<h1 class="yumyum-title"> Careers</h1>
+									<div class="breadcrumb-listItem">
+										<!-- Breadcrumb NavXT 7.3.1 -->
+										<span property="itemListElement" typeof="ListItem"><a property="item"
+												typeof="WebPage" title="Go to Yumyum."
+												href="index.html" class="home"><span
+													property="name">Pizzaiiolo</span></a>
+											<meta property="position" content="1">
+										</span> &gt; <span property="itemListElement" typeof="ListItem"><span
+												property="name" class="post post-page current-item">Careers</span>
+											
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="site-content" tabindex="-1">
+			<div class="col-full">
+
+				<div class="woocommerce"></div>
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+						<div data-elementor-type="wp-page" data-elementor-id="168" class="elementor elementor-168">
+							
+							<div class="elementor-element elementor-element-108281f e-flex e-con-boxed e-con e-parent"
+								data-id="108281f" data-element_type="container">
+								<div class="e-con-inner">
+									<div class="elementor-element elementor-element-681cc70 yumyum-elementor-headline--style-default elementor-widget elementor-widget-yumyum-animated-headline"
+										data-id="681cc70" data-element_type="widget"
+										data-settings="{&quot;headline_style&quot;:&quot;default&quot;}"
+										data-widget_type="yumyum-animated-headline.default">
+										<div class="elementor-widget-container">
+											<h2 class="elementor-headline">
+												<span
+													class="yumyum-elementor-headline-plain-text yumyum-elementor-headline-text-wrapper">Join Our team of Expert</span>
+												<span
+													class="yumyum-elementor-headline-dynamic-wrapper yumyum-elementor-headline-text-wrapper">
+													<span class="yumyum-elementor-headline-dynamic-text">Chefs</span>
+												</span>
+											</h2>
+										</div>
+									</div>
+									<div>
+										<div class="container">
+        <div class="job-opening">
+            <h2>Pizza Chef (Pizzaiolo)</h2>
+            <p>We're looking for experienced pizza chefs to join our team and create mouth-watering pizzas for our customers.</p>
+            <a href="contact.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-opening">
+            <h2>Kitchen Assistant</h2>
+            <p>Assist in the kitchen by preparing ingredients and maintaining cleanliness.</p>
+            <a href="contact.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-opening">
+            <h2>Delivery Driver</h2>
+            <p>Deliver hot, fresh pizzas to customers promptly and safely.</p>
+            <a href="contact.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-opening">
+            <h2>Cashier</h2>
+            <p>Handle customer orders and ensure smooth payment processing.</p>
+            <a href="contact.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-opening">
+            <h2>Store Manager</h2>
+            <p>Lead the team and ensure smooth day-to-day operations.</p>
+            <a href="contact.html" class="apply-btn">Apply Now</a>
+        </div>
+    </div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</main><!-- #main -->
+				</div><!-- #primary -->
+
+			</div><!-- .col-full -->
+		</div><!-- #content -->
+
+		<div class='footer-width-fixer'>
+			<div data-elementor-type="wp-post" data-elementor-id="4504" class="elementor elementor-4504">
+				<div class="elementor-element elementor-element-4b13ffb e-con-full elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-tablet e-flex e-con e-parent"
+					data-id="4b13ffb" data-element_type="container"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;position&quot;:&quot;fixed&quot;}">
+					<div class="elementor-element elementor-element-33e1110 e-con-full e-flex e-con e-child"
+						data-id="33e1110" data-element_type="container">
+						<div class="elementor-element elementor-element-11f4f31 yumyum-search-layout-4 elementor-widget elementor-widget-yumyum-search"
+							data-id="11f4f31" data-element_type="widget" data-widget_type="yumyum-search.default">
+							<div class="elementor-widget-container">
+								<div class="site-header-search">
+									<a href="#" class="button-search-popup">
+										<i class="yumyum-icon-search"></i>
+										<span class="content">Search</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-3c90f65 e-con-full e-flex e-con e-child"
+						data-id="3c90f65" data-element_type="container">
+						<div class="elementor-element elementor-element-4ca29ed elementor-view-default icon-box-style-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-yumyum-icon-box"
+							data-id="4ca29ed" data-element_type="widget" data-widget_type="yumyum-icon-box.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-icon-box-wrapper">
+									<div class="elementor-icon-box-icon">
+										<a class="elementor-icon elementor-animation-" href="my-account/index.html">
+											<i aria-hidden="true" class="yumyum-icon- yumyum-icon-user-01"></i> </a>
+									</div>
+									<div class="elementor-icon-box-content">
+										<div class="title-content">
+											<h4 class="elementor-icon-box-title">
+												<a>
+												</a>
+											</h4>
+											<p class="elementor-icon-box-description">
+												Account </p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-016fe46 e-con-full e-flex e-con e-child"
+						data-id="016fe46" data-element_type="container">
+						<div class="elementor-element elementor-element-62acc5d elementor-view-default icon-box-style-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-yumyum-icon-box"
+							data-id="62acc5d" data-element_type="widget" data-widget_type="yumyum-icon-box.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-icon-box-wrapper">
+									<div class="elementor-icon-box-icon">
+										<a class="elementor-icon elementor-animation-" href="cart/index.html">
+											<i aria-hidden="true" class="yumyum-icon- yumyum-icon-cart-01"></i> </a>
+									</div>
+									<div class="elementor-icon-box-content">
+										<div class="title-content">
+											<h4 class="elementor-icon-box-title">
+												<a>
+												</a>
+											</h4>
+											<p class="elementor-icon-box-description">
+												Cart </p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+			<div class='footer-width-fixer'>
+				<div data-elementor-type="wp-post" data-elementor-id="258" class="elementor elementor-258">
+					<div class="elementor-element elementor-element-d22da3f e-con-full e-flex e-con e-parent"
+						data-id="d22da3f" data-element_type="container"
+						data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;yumyum-top&quot;}">
+						<div class="elementor-shape elementor-shape-top" data-negative="false">
+							<svg width="1920" height="24" viewBox="0 0 1920 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path class="elementor-shape-fill"
+									d="M0 12.0832C0 -1.6198 1.222 -1.7098 35.835 9.4422C70.526 20.6192 99.241 20.9942 128 10.6462C156.216 0.492203 183.448 0.403202 214.4 10.3642C246.204 20.5992 273.035 20.6662 302.4 10.5822C331.584 0.561203 358.524 0.585203 390.4 10.6622C421.431 20.4712 445.935 20.4202 476.8 10.4832C507.8 0.502203 532.211 0.480202 563.2 10.4032C595.184 20.6442 621.939 20.6652 651.2 10.4692C680.383 0.300203 707.451 0.305202 737.6 10.4832C767.594 20.6092 794.764 20.6492 824 10.6112C853.851 0.363203 880.688 0.287205 912 10.3642C943.963 20.6502 970.689 20.6822 1000 10.4692C1029.33 0.247204 1056.32 0.287203 1086.4 10.5972C1115.9 20.7092 1143.13 20.7482 1172.59 10.7212C1200.59 1.1912 1221.67 1.1672 1249.81 10.6322C1280.06 20.8052 1310.04 20.8332 1337.6 10.7132C1365.93 0.309204 1395.71 0.255203 1425.6 10.5552C1455.25 20.7732 1482.3 20.7812 1512 10.5822C1541.51 0.448204 1568.68 0.412205 1598.4 10.4682C1628.06 20.5002 1655.02 20.4842 1686.4 10.4172C1717.42 0.465202 1741.82 0.472202 1772.8 10.4412C1803.32 20.2622 1833.99 20.4372 1860.34 10.9432C1870.65 7.2292 1888.29 3.2482 1899.55 2.0952L1920 -0.000797272V23.2832H0V12.0832Z"
+									fill="#FB9300" fill-opacity="0.25" />
+							</svg>
+						</div>
+						<div class="elementor-element elementor-element-851ba47 e-con-full e-flex e-con e-child"
+							data-id="851ba47" data-element_type="container"
+							data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-element elementor-element-45a219d elementor-absolute animated-fast elementor-invisible elementor-widget elementor-widget-image"
+								data-id="45a219d" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;slideInUp&quot;}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="414" height="395"
+									src="wp-content/uploads/2024/09/img-ft-5-min.png"
+
+										class="attachment-full size-full wp-image-682" alt=""
+										>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-5e08526 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-image"
+								data-id="5e08526" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;pavo-move-down&quot;,&quot;_animation_delay&quot;:300}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="93" height="103"
+										src="wp-content/uploads/2024/09/img-ft-4-min.png"
+										class="attachment-full size-full wp-image-681" alt="">
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-bf89074 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-image"
+								data-id="bf89074" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;rubberBand&quot;,&quot;_animation_delay&quot;:300}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="149" height="134"
+									src="wp-content/uploads/2024/09/img-ft-2-min.png"
+									class="attachment-full size-full wp-image-679" alt="">
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-2315b78 elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-image"
+								data-id="2315b78" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_animation_delay&quot;:400}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="103" height="105"
+									src="wp-content/uploads/2024/09/img-ft-3-min.png"
+									class="attachment-full size-full wp-image-680" alt="">
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-60b379f elementor-absolute animated-fast elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-image"
+								data-id="60b379f" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:600}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="59" height="67"
+									src="wp-content/uploads/2024/09/img-ft-1-min.png"
+									class="attachment-full size-full wp-image-678" alt="">
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-5e13783 e-con-full e-flex e-con e-child"
+							data-id="5e13783" data-element_type="container">
+							<div class="elementor-element elementor-element-17d8805 elementor-widget elementor-widget-heading"
+								data-id="17d8805" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-widget-container">
+									<h2 class="elementor-heading-title elementor-size-default">want to go back?
+									</h2>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-0eeeaf2 elementor-widget-tablet__width-initial elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-text-editor"
+								data-id="0eeeaf2" data-element_type="widget" data-widget_type="text-editor.default">
+
+								<div class="elementor-widget-container">
+									<div class="elementor-element elementor-element-6503780 elementor-button-outline elementor-widget elementor-widget-button"
+										data-id="6503780" data-element_type="widget" data-widget_type="button.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-button-wrapper">
+												<a class="elementor-button elementor-button-link elementor-size-md"
+													href="index.html">
+													<span class="elementor-button-content-wrapper">
+														<span class="elementor-button-icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="20"
+																height="20" viewBox="0 0 20 20" fill="none">
+																<path
+																	d="M2.32861 6.13265H9.07052C9.19432 6.1321 9.31282 6.08241 9.39999 5.99451C9.48716 5.90661 9.53586 5.78769 9.53537 5.6639V5.13171C9.53537 3.74956 11.0447 2.90808 12.2059 3.64292L18.1402 7.3982C19.99 8.56874 19.9959 11.2841 18.1513 12.4629L12.0341 16.3719C10.9506 17.0643 9.53552 16.2795 9.53552 14.9862V13.9476H2.32861C1.83334 13.9456 1.35916 13.747 1.01037 13.3953C0.661582 13.0437 0.466762 12.5679 0.468765 12.0726V8.00765C0.466762 7.51238 0.661582 7.0366 1.01037 6.68497C1.35916 6.33334 1.83334 6.13466 2.32861 6.13265Z"
+																	fill="#FFEB3B"></path>
+																<path
+																	d="M18.1403 7.39844C18.7982 7.81461 19.0387 8.54145 19.0478 9.24609C19.0585 10.0923 18.6848 10.7738 18.0109 11.2318C16.545 12.2279 12.034 15.0052 12.034 15.0052C10.9506 15.6976 9.53548 14.9128 9.53548 13.6195V13.2032C9.53598 13.0794 9.48729 12.9605 9.40012 12.8726C9.31295 12.7847 9.19444 12.735 9.07064 12.7345H2.32861C1.83334 12.7324 1.35917 12.5337 1.01038 12.1821C0.661596 11.8305 0.466772 11.3547 0.468765 10.8595V12.0729C0.466762 12.5682 0.661582 13.0439 1.01037 13.3956C1.35916 13.7472 1.83334 13.9459 2.32861 13.9479H9.53564V14.9865C9.53564 16.2798 10.9507 17.0646 12.0342 16.3722L18.1514 12.4631C19.9961 11.2844 19.9901 8.56898 18.1403 7.39844Z"
+																	fill="#FB9300"></path>
+																<path
+																	d="M18.2656 7.19922L12.3313 3.44399C12.0348 3.25306 11.6919 3.14647 11.3394 3.13568C10.9869 3.12488 10.6381 3.21027 10.3304 3.3827C10.0163 3.55317 9.75452 3.80595 9.57317 4.11393C9.39182 4.4219 9.29775 4.77344 9.30105 5.13083V5.66297C9.30149 5.72459 9.27748 5.78387 9.23427 5.82781C9.19107 5.87174 9.1322 5.89675 9.07059 5.89735H2.32855C1.17383 5.89735 0.234375 6.84364 0.234375 8.00672V12.0718C0.234375 13.2348 1.17383 14.1811 2.32855 14.1811H9.30121V14.9854C9.29801 15.3224 9.38686 15.6539 9.55818 15.9442C9.72951 16.2345 9.97681 16.4725 10.2734 16.6326C10.564 16.7947 10.8932 16.8744 11.2257 16.8631C11.5582 16.8518 11.8813 16.7499 12.1602 16.5686L18.2775 12.6596C18.735 12.3654 19.1111 11.9609 19.3711 11.4832C19.6312 11.0055 19.7669 10.4701 19.7657 9.92623C19.7646 9.38236 19.6266 8.84753 19.3644 8.37098C19.1023 7.89444 18.7245 7.49151 18.2658 7.1993L18.2656 7.19922ZM9.30117 13.7124H2.32855C1.91661 13.7101 1.52073 13.5523 1.22022 13.2705C0.919709 12.9887 0.736756 12.6038 0.708008 12.1929C0.903292 12.4346 1.15015 12.6297 1.43054 12.7638C1.71092 12.8978 2.01773 12.9675 2.32852 12.9678H9.07031C9.13198 12.9683 9.19092 12.9933 9.2342 13.0372C9.27748 13.0812 9.30157 13.1405 9.30117 13.2022V13.7124ZM9.07031 12.499H2.32852C1.89557 12.4965 1.4813 12.3224 1.17659 12.0148C0.871881 11.7072 0.701607 11.2914 0.703125 10.8584V8.00684C0.701607 7.57389 0.871886 7.15801 1.17661 6.85044C1.48133 6.54287 1.8956 6.36873 2.32855 6.36622H9.07051C9.2564 6.36547 9.43441 6.29103 9.56549 6.15922C9.69657 6.0274 9.77002 5.84898 9.76973 5.66309V5.13083C9.76706 4.85746 9.83888 4.58854 9.97748 4.3529C10.1161 4.11727 10.3162 3.92382 10.5564 3.79333C10.7908 3.66201 11.0565 3.597 11.325 3.60526C11.5936 3.61351 11.8548 3.69473 12.0806 3.8402C12.1495 3.88493 18.0038 7.58629 18.068 7.63024C18.7035 8.0686 18.8083 8.83168 18.8132 9.24786C18.8229 9.99618 18.4999 10.6148 17.8791 11.0369C16.4343 12.0185 11.9562 14.7764 11.9111 14.8041C11.91 14.8048 11.9089 14.8055 11.9078 14.8062C11.6995 14.9417 11.4583 15.0179 11.21 15.0263C10.9617 15.0348 10.7157 14.9753 10.4988 14.8543C10.2763 14.7341 10.0908 14.5555 9.96236 14.3376C9.83393 14.1198 9.76739 13.871 9.76992 13.6182V13.2022C9.77018 13.0162 9.69667 12.8377 9.56551 12.7059C9.43435 12.5741 9.25626 12.4997 9.07031 12.499ZM19.2969 9.92704C19.2999 10.3924 19.1848 10.851 18.9624 11.2598C18.74 11.6686 18.4175 12.0143 18.0252 12.2645L11.908 16.1736C11.6997 16.3091 11.4584 16.3851 11.2101 16.3936C10.9617 16.402 10.7158 16.3425 10.4988 16.2215C10.2763 16.1013 10.0909 15.9227 9.96241 15.7048C9.83396 15.487 9.7674 15.2382 9.76992 14.9854V14.8663C9.91388 15.0271 10.0843 15.1622 10.2738 15.2655C10.5641 15.4274 10.8929 15.507 11.2251 15.4959C11.5572 15.4847 11.88 15.3832 12.1588 15.2023C12.2662 15.1361 16.6997 12.4051 18.1431 11.4245C18.8142 10.9682 19.1997 10.3232 19.2705 9.54676C19.2878 9.67278 19.2967 9.79983 19.2969 9.92704Z"
+																	fill="#110A00"></path>
+															</svg> </span>
+														<span class="elementor-button-text">Home</span>
+													</span>
+												</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-f205839 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit form-mailchimp-style-default elementor-widget elementor-widget-yumyum-mailchmip"
+									data-id="f205839" data-element_type="widget"
+									data-widget_type="yumyum-mailchmip.default">
+
+								</div>
+							</div>
+						</div>
+							<div class="elementor-element elementor-element-cf49021 elementor-absolute elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-image"
+								data-id="cf49021" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;bounceInRight&quot;}"
+								data-widget_type="image.default">
+								<div class="elementor-widget-container">
+									<img width="446" height="459"
+									src="wp-content/uploads/2024/09/img-ft-6-min.png"
+									class="attachment-full size-full wp-image-683" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-451d077 e-flex e-con-boxed e-con e-child"
+						data-id="451d077" data-element_type="container">
+						<div class="e-con-inner">
+							<div class="elementor-element elementor-element-46b8af9 e-con-full e-flex e-con e-child"
+								data-id="46b8af9" data-element_type="container">
+								<div class="elementor-element elementor-element-fa4d03f elementor-widget elementor-widget-yumyum-site-logo"
+									data-id="fa4d03f" data-element_type="widget"
+									data-widget_type="yumyum-site-logo.default">
+									<div class="elementor-widget-container">
+										<div class="yumyum-site-logo">
+											<a data-elementor-open-lightbox="" class="elementor-clickable"
+												href="index.html">
+												<div class="yumyum-site-logo-set">
+													<div class="yumyum-site-logo-container">
+														<img class="yumyum-site-logo-img elementor-animation-"
+															src="wp-content/uploads/2024/09/logo-6.png" alt="logo-3">
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="elementor-element elementor-element-4e1e06c elementor-widget elementor-widget-text-editor"
+									data-id="4e1e06c" data-element_type="widget" data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<a href="mailto:shriwar@pizzaiiolo.com">
+											shriwar@pizzaiiolo.com
+										</a>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-6fa779e elementor-widget elementor-widget-heading"
+									data-id="6fa779e" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default"><a
+												href="tel:+91 92653 87366">+91 92653 87366</a></h2>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+
+							</div>
+
+							<div class="elementor-element elementor-element-5c0a22a e-con-full e-flex e-con e-child"
+								data-id="5c0a22a" data-element_type="container">
+								<div class="elementor-element elementor-element-9460c93 elementor-widget elementor-widget-heading"
+									data-id="9460c93" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">QUICK LINKS</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-9d2b82a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+									data-id="9d2b82a" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<a href="index.html">
+
+													<span class="elementor-icon-list-text">Home</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="menu.html">
+
+													<span class="elementor-icon-list-text">Menu</span>
+												</a>
+											</li>
+											
+											<li class="elementor-icon-list-item">
+												<a href="awards.html">
+
+													<span class="elementor-icon-list-text">awards</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="about-us.html">
+
+													<span class="elementor-icon-list-text">About us</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="contact.html">
+
+													<span class="elementor-icon-list-text">Contact</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="careers.html">
+
+													<span class="elementor-icon-list-text">Careers</span>
+												</a>
+											</li>
+											
+											<li class="elementor-icon-list-item">
+												<a href="franchise.html">
+
+													<span class="elementor-icon-list-text">Franchise-opportunity</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+
+							</div>
+							<div class="elementor-element elementor-element-f78293f e-con-full e-flex e-con e-child"
+								data-id="f78293f" data-element_type="container">
+								<div class="elementor-element elementor-element-65f1281 elementor-widget elementor-widget-heading"
+									data-id="65f1281" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">OPENING HOURS
+										</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-66a9b7e e-con-full e-flex e-con e-child"
+									data-id="66a9b7e" data-element_type="container">
+									<div class="elementor-element elementor-element-85e8710 e-con-full e-flex e-con e-child"
+										data-id="85e8710" data-element_type="container">
+										<div class="elementor-element elementor-element-dd7b8a7 elementor-widget elementor-widget-text-editor"
+											data-id="dd7b8a7" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												Every Day: </div>
+										</div>
+										<div class="elementor-element elementor-element-a7dcb7f elementor-widget elementor-widget-text-editor"
+											data-id="a7dcb7f" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												11 am - 11 pm </div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-b6efe30 e-flex e-con-boxed e-con e-child"
+						data-id="b6efe30" data-element_type="container"
+						data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="e-con-inner">
+							<div class="elementor-element elementor-element-e11810f e-con-full e-flex e-con e-child"
+								data-id="e11810f" data-element_type="container">
+								<div class="elementor-element elementor-element-871ab7a e-con-full e-flex e-con e-child"
+									data-id="871ab7a" data-element_type="container">
+									<div class="elementor-element elementor-element-c2b4c74 elementor-widget elementor-widget-text-editor"
+										data-id="c2b4c74" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											©2024 </div>
+									</div>
+									<div class="elementor-element elementor-element-856a358 elementor-widget elementor-widget-text-editor"
+										data-id="856a358" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											<a href="index.html" target="_blank" rel="noopener">PIZZAIIOLO.</a>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-18e3e2b elementor-widget elementor-widget-text-editor"
+										data-id="18e3e2b" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											All Rights Reserved </div>
+									</div>
+								</div>
+
+								<div class="elementor-element elementor-element-85add6d e-con-full elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con e-child"
+									data-id="85add6d" data-element_type="container">
+									<div class="elementor-element elementor-element-a345ea1 elementor-widget elementor-widget-text-editor"
+										data-id="a345ea1" data-element_type="widget"
+										data-widget_type="text-editor.default">
+										<div class="elementor-widget-container">
+											Follow Us: </div>
+									</div>
+									<div class="elementor-element elementor-element-f8b589b elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons"
+										data-id="f8b589b" data-element_type="widget"
+										data-widget_type="social-icons.default">
+										<div class="elementor-widget-container">
+											<div class="elementor-social-icons-wrapper elementor-grid">
+
+												<span class="elementor-grid-item">
+													<a class="elementor-icon elementor-social-icon elementor-social-icon-yumyum-icon-instagram elementor-repeater-item-7de4a19"
+														href="https://www.instagram.com/pizzaiiolo.india/"
+														target="_blank">
+														<span class="elementor-screen-only">Yumyum-icon-instagram</span>
+														<i class="yumyum-icon- yumyum-icon-instagram"></i> </a>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div><!-- #page -->
+
+	<div class="yumyum-mobile-nav">
+		<div class="menu-scroll-mobile">
+			<a href="#" class="mobile-nav-close"><i class="yumyum-icon-times"></i></a>
+			<div class="mobile-nav-tabs">
+				<ul>
+					<li class="mobile-tab-title mobile-pages-title active" data-menu="pages">
+						<span>Main Menu</span>
+					</li>
+				</ul>
+			</div>
+			<nav class="mobile-menu-tab mobile-navigation mobile-pages-menu active" aria-label="Mobile Navigation">
+				<div class="handheld-navigation">
+					<ul id="menu-main-menu" class="menu">
+						<li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-159">
+							<a href="index.html">Home</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-180">
+							<a href="menu.html">Menu</a>
+						</li>
+						
+						<li
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169 ">
+							<a href="awards.html">Awards</a></li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a
+								href="about-us.html">About Us</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a
+									href="contact.html">Contact</a></li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219 current-menu-ancestor current-menu-parent"><a
+								href="careers.html">Careers</a></li>
+								
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170">
+							<a href="franchise.html">franchise-opportunity</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="yumyum-overlay"></div>
+
+	<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script type="rocketlazyloadscript">
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+	
+	<div class="site-search-popup-overlay"></div>
+	<script type="rocketlazyloadscript">(function() {function maybePrefixUrlField () {
+  const value = this.value.trim()
+  if (value !== '' && value.indexOf('http') !== 0) {
+    this.value = 'http://' + value
+  }
+}
+
+const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
+for (let j = 0; j < urlFields.length; j++) {
+  urlFields[j].addEventListener('blur', maybePrefixUrlField)
+}
+})();</script>
+	<div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div><a href="#" class="scrollup"><span
+			class="scrollup-icon yumyum-icon-long-arrow-up"></span><span class="scrollup-label">Top</span></a>
+	<script type="text/html" id="tmpl-ajax-live-search-template">
+        <div class="product-item-search">
+            <# if(data.url){ #>
+            <a class="product-link" href="{{{data.url}}}" title="{{{data.title}}}">
+            <# } #>
+                <# if(data.img){#>
+                <img src="{{{data.img}}}" alt="{{{data.title}}}">
+                 <# } #>
+                <div class="product-content">
+                <h3 class="product-title">{{{data.title}}}</h3>
+                <# if(data.price){ #>
+                {{{data.price}}}
+                 <# } #>
+                </div>
+                <# if(data.url){ #>
+            </a>
+            <# } #>
+        </div>
+        </script>
+	<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+	<script type="rocketlazyloadscript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<div class="site-header-cart-side">
+		<div class="cart-side-heading">
+			<span class="cart-side-title">Shopping cart</span>
+			<a href="#" class="close-cart-side">close</a>
+		</div>
+		<div class="widget woocommerce widget_shopping_cart">
+			<div class="widget_shopping_cart_content"></div>
+		</div>
+	</div>
+	<div class="cart-side-overlay"></div>
+	<link data-minify="1" rel='stylesheet' id='wc-blocks-style-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-4146-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-41460ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='elementor-post-2023-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/uploads/elementor/css/post-20230ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='widget-icon-list-css'
+		href='wp-content/uploads/elementor/css/custom-widget-icon-list.min002d.css?ver=1733561416' media='all' />
+	<link data-minify="1" rel='stylesheet' id='e-animation-pavo-scale-up-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/animations/pavo-scale-up0ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='e-animation-tada-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/tada.min18be.css?ver=3.25.10' media='all' />
+	<link rel='stylesheet' id='e-animation-slideInUp-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/slideInUp.min18be.css?ver=3.25.10'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='e-animation-pavo-move-down-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/animations/pavo-move-down0ab5.css?ver=1733562605'
+		media='all' />
+	<link rel='stylesheet' id='e-animation-rubberBand-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/rubberBand.min18be.css?ver=3.25.10'
+		media='all' />
+	<link rel='stylesheet' id='e-animation-fadeInLeft-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min18be.css?ver=3.25.10'
+		media='all' />
+	<link rel='stylesheet' id='e-animation-zoomIn-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min18be.css?ver=3.25.10'
+		media='all' />
+	<link rel='stylesheet' id='e-animation-bounceInRight-css'
+		href='wp-content/plugins/elementor/assets/lib/animations/styles/bounceInRight.min18be.css?ver=3.25.10'
+		media='all' />
+	<link rel='stylesheet' id='widget-social-icons-css'
+		href='wp-content/plugins/elementor/assets/css/widget-social-icons.min18be.css?ver=3.25.10' media='all' />
+	<link rel='stylesheet' id='e-apple-webkit-css'
+		href='wp-content/uploads/elementor/css/custom-apple-webkit.min002d.css?ver=1733561416' media='all' />
+	<link data-minify="1" rel='stylesheet' id='magnific-popup-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/css/libs/magnific-popup0ab5.css?ver=1733562605'
+		media='all' />
+	<link data-minify="1" rel='stylesheet' id='rs-plugin-settings-css'
+		href='wp-content/cache/min/1/yumyum/wp-content/plugins/revslider/sr6/assets/css/rs60ab5.css?ver=1733562605'
+		media='all' />
+	<style id='rs-plugin-settings-inline-css'>
+		#rs-demo-id {}
+	</style>
+	<script src="wp-includes/js/dist/hooks.min4fdd.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+	<script src="wp-includes/js/dist/i18n.minc33c.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+	<script id="wp-i18n-js-after">
+		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+	</script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/plugins/contact-form-7/includes/swv/js/index0ab5.js?ver=1733562605"
+		id="swv-js"></script>
+
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/plugins/contact-form-7/includes/js/index0ab5.js?ver=1733562605"
+		id="contact-form-7-js"></script>
+	<script src="wp-content/plugins/revslider/sr6/assets/js/rbtools.min7a23.js?ver=6.7.23" defer async
+		id="tp-tools-js"></script>
+	<script src="wp-content/plugins/revslider/sr6/assets/js/rs6.min7a23.js?ver=6.7.23" defer async
+		id="revmin-js"></script>
+	<script src="wp-includes/js/underscore.min3ab8.js?ver=1.13.7" id="underscore-js"></script>
+	<script id="wp-util-js-extra">
+		var _wpUtilSettings = { "ajax": { "url": "\/yumyum\/wp-admin\/admin-ajax.php" } };
+	</script>
+	<script src="wp-includes/js/wp-util.min9704.js?ver=6.7.1" id="wp-util-js"></script>
+
+	<script src="wp-includes/js/api-request.min9704.js?ver=6.7.1" id="wp-api-request-js"></script>
+	<script src="wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0" id="wp-polyfill-js"></script>
+	<script src="wp-includes/js/dist/url.min9481.js?ver=e87eb76272a3a08402d2" id="wp-url-js"></script>
+	<script src="wp-includes/js/dist/api-fetch.min53e9.js?ver=d387b816bc1ed2042e28" id="wp-api-fetch-js"></script>
+	<script id="wp-api-fetch-js-after">
+		wp.apiFetch.use(wp.apiFetch.createRootURLMiddleware("wp-json/index.html"));
+		wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware("bdc24f73df");
+		wp.apiFetch.use(wp.apiFetch.nonceMiddleware);
+		wp.apiFetch.use(wp.apiFetch.mediaUploadMiddleware);
+		wp.apiFetch.nonceEndpoint = "wp-admin/admin-ajaxf809.html?action=rest-nonce";
+	</script>
+
+	<script src="wp-content/plugins/woo-variation-swatches/assets/js/frontend.min845d.js?ver=1733196960"
+		id="woo-variation-swatches-js"></script>
+	<script id="rocket-browser-checker-js-after">
+		"use strict"; var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor) } } return function (Constructor, protoProps, staticProps) { return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor } }(); function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function") } var RocketBrowserCompatibilityChecker = function () { function RocketBrowserCompatibilityChecker(options) { _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options } return _createClass(RocketBrowserCompatibilityChecker, [{ key: "_checkPassiveOption", value: function (self) { try { var options = { get passive() { return !(self.passiveSupported = !0) } }; window.addEventListener("test", null, options), window.removeEventListener("test", null, options) } catch (err) { self.passiveSupported = !1 } } }, { key: "initRequestIdleCallback", value: function () { !1 in window && (window.requestIdleCallback = function (cb) { var start = Date.now(); return setTimeout(function () { cb({ didTimeout: !1, timeRemaining: function () { return Math.max(0, 50 - (Date.now() - start)) } }) }, 1) }), !1 in window && (window.cancelIdleCallback = function (id) { return clearTimeout(id) }) } }, { key: "isDataSaverModeOn", value: function () { return "connection" in navigator && !0 === navigator.connection.saveData } }, { key: "supportsLinkPrefetch", value: function () { var elem = document.createElement("link"); return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype } }, { key: "isSlowConnection", value: function () { return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType) } }]), RocketBrowserCompatibilityChecker }();
+	</script>
+
+
+	<script
+		src="wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min55fe.js?ver=4.9.5"
+		id="perfect-scrollbar-js"></script>
+
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/plugins/woo-smart-wishlist/assets/js/frontend0ab5.js?ver=1733562605"
+		id="woosw-frontend-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/jquery.sticky-kit.minf269.js?ver=1.0.1"
+		id="sticky-kit-js"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/libs/swiper0ab5.js?ver=1733562605"
+		id="swiper-js"></script>
+
+	<script src="wp-content/themes/yumyum/assets/js/frontend/main.minf269.js?ver=1.0.1"
+		id="yumyum-theme-js"></script>
+	<script src="wp-includes/js/imagesloaded.minbb93.js?ver=5.0.0" id="imagesloaded-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/skip-link-focus-fix.minf269.js?ver=1.0.1"
+		id="yumyum-skip-link-focus-fix-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/frontend/search-popup.minf269.js?ver=1.0.1"
+		id="yumyum-search-popup-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/frontend/text-editor.minf269.js?ver=1.0.1"
+		id="yumyum-text-editor-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/frontend/nav-mobile.minf269.js?ver=1.0.1"
+		id="yumyum-nav-mobile-js"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/inc/megamenu/assets/js/frontend0ab5.js?ver=1733562605"
+		id="yumyum-megamenu-frontend-js"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/frontend/login0ab5.js?ver=1733562605"
+		id="yumyum-ajax-login-js"></script>
+	<script src="wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.minea26.js?ver=9.4.2"
+		id="sourcebuster-js-js"></script>
+
+	<script src="wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.minea26.js?ver=9.4.2"
+		id="wc-order-attribution-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/jquery.magnific-popup.minf269.js?ver=1.0.1"
+		id="magnific-popup-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/single.minf269.js?ver=1.0.1"
+		id="yumyum-single-product-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/header-cart.minf269.js?ver=1.0.1"
+		id="yumyum-header-cart-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/tooltipster.bundle.minf269.js?ver=1.0.1"
+		id="tooltipster-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/product-ajax-search.minf269.js?ver=1.0.1"
+		id="yumyum-products-ajax-search-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/jquery.waypoints.minf269.js?ver=1.0.1"
+		id="waypoints-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/main.minf269.js?ver=1.0.1"
+		id="yumyum-products-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/quantity.minf269.js?ver=1.0.1"
+		id="yumyum-input-quantity-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/cart-canvas.minf269.js?ver=1.0.1"
+		id="yumyum-cart-canvas-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/woocommerce/off-canvas.minf269.js?ver=1.0.1"
+		id="yumyum-off-canvas-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/TweenMax.min90f9.js?ver=1.11.1" id="tweenmax-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/libs/jquery-parallax.minf269.js?ver=1.0.1"
+		id="parallaxmouse-js"></script>
+	<script data-minify="1" defer
+		src="wp-content/cache/min/1/yumyum/wp-content/plugins/mailchimp-for-wp/assets/js/forms0ab5.js?ver=1733562605"
+		id="mc4wp-forms-api-js"></script>
+	<script src="wp-content/plugins/elementor/assets/js/webpack.runtime.min18be.js?ver=3.25.10"
+		id="elementor-webpack-runtime-js"></script>
+	<script src="wp-content/plugins/elementor/assets/js/frontend-modules.min18be.js?ver=3.25.10"
+		id="elementor-frontend-modules-js"></script>
+	<script src="wp-includes/js/jquery/ui/core.minb37e.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+
+	<script src="wp-content/plugins/elementor/assets/js/frontend.min18be.js?ver=3.25.10"
+		id="elementor-frontend-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/elementor/animated-headline.minf269.js?ver=1.0.1"
+		id="yumyum-elementor-animated-headline-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/elementor/team-box.minf269.js?ver=1.0.1"
+		id="yumyum-elementor-team-box-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/elementor/testimonial.minf269.js?ver=1.0.1"
+		id="yumyum-elementor-testimonial-js"></script>
+	<script src="wp-content/themes/yumyum/assets/js/elementor-frontend.minf269.js?ver=1.0.1"
+		id="yumyum-elementor-frontend-js"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/frontend/jquery-sticky0ab5.js?ver=1733562605"
+		id="elementor-sticky-js"></script>
+	<script data-minify="1"
+		src="wp-content/cache/min/1/yumyum/wp-content/themes/yumyum/assets/js/libs/sticky0ab5.js?ver=1733562605"
+		id="yumyum-elementor-sticky-js"></script>
+	<script id="wc-cart-fragments-js-extra">
+		var wc_cart_fragments_params = { "ajax_url": "\/yumyum\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/yumyum\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_cf4c9ce0248d8e8ff83a9a31e36bf0cf", "fragment_name": "wc_fragments_cf4c9ce0248d8e8ff83a9a31e36bf0cf", "request_timeout": "5000" };
+	</script>
+	<script src="wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minea26.js?ver=9.4.2"
+		id="wc-cart-fragments-js" defer data-wp-strategy="defer"></script>
+	<script>window.lazyLoadOptions = { elements_selector: "img[data-lazy-src],.rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }; window.addEventListener('LazyLoad::Initialized', function (e) {
+			var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+				var observer = new MutationObserver(function (mutations) {
+					var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+						for (i = 0; i < mutation.addedNodes.length; i++) {
+							if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+							if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+							images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+							if (is_iframe) { iframe_count += 1 }
+						}
+					}); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+				}); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+			}
+		}, !1)</script>
+	<script data-no-minify="1" async
+		src="wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
+</body>
+
+
+</html>
